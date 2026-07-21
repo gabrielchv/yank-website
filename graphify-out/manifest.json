@@ -1,0 +1,847 @@
+{
+  ".claude/settings.local.json": {
+    "mtime": 1784668958.982929,
+    "ast_hash": "f6878456ea08fc5c73ea53baa7587ef6",
+    "semantic_hash": "f6878456ea08fc5c73ea53baa7587ef6"
+  },
+  "eslint.config.mjs": {
+    "mtime": 1784670235.749404,
+    "ast_hash": "dfa1f5f6a7037bf39dc510f30b180002",
+    "semantic_hash": "dfa1f5f6a7037bf39dc510f30b180002"
+  },
+  "next.config.ts": {
+    "mtime": 1784672020.8783429,
+    "ast_hash": "87c3c67da9ef1a26cbd3ccff868dc52d",
+    "semantic_hash": "87c3c67da9ef1a26cbd3ccff868dc52d"
+  },
+  "package.json": {
+    "mtime": 1784671984.9157178,
+    "ast_hash": "e0eb01e0aa42f7d9b5ee1fe917516f43",
+    "semantic_hash": "e0eb01e0aa42f7d9b5ee1fe917516f43"
+  },
+  "postcss.config.mjs": {
+    "mtime": 1784670235.749351,
+    "ast_hash": "239f3ebf717465dc636818a1a619398d",
+    "semantic_hash": "239f3ebf717465dc636818a1a619398d"
+  },
+  "scripts/check-data.ts": {
+    "mtime": 1784671996.597596,
+    "ast_hash": "c645700b404c7d7c7fb4328ea32c9b3c",
+    "semantic_hash": "c645700b404c7d7c7fb4328ea32c9b3c"
+  },
+  "scripts/fetch-images.ts": {
+    "mtime": 1784671414.142019,
+    "ast_hash": "3c7cae6b27c1d74b8d82f26cf6d0bd3e",
+    "semantic_hash": "3c7cae6b27c1d74b8d82f26cf6d0bd3e"
+  },
+  "src/app/(catalogo)/[categoria]/[produto]/page.tsx": {
+    "mtime": 1784671833.0454402,
+    "ast_hash": "2857674819f70ef43ffb8f78fbf60455",
+    "semantic_hash": "2857674819f70ef43ffb8f78fbf60455"
+  },
+  "src/app/(catalogo)/[categoria]/page.tsx": {
+    "mtime": 1784671788.7018352,
+    "ast_hash": "642b783dd7fecdeb4fb1a911c1525769",
+    "semantic_hash": "642b783dd7fecdeb4fb1a911c1525769"
+  },
+  "src/app/a-empresa/page.tsx": {
+    "mtime": 1784671870.8389962,
+    "ast_hash": "ff94ab60ba8c7810cf6de7cc6f5eb72e",
+    "semantic_hash": "ff94ab60ba8c7810cf6de7cc6f5eb72e"
+  },
+  "src/app/blog/[slug]/page.tsx": {
+    "mtime": 1784671954.9360354,
+    "ast_hash": "89140d8336cd6fe08457084c95d3e90e",
+    "semantic_hash": "89140d8336cd6fe08457084c95d3e90e"
+  },
+  "src/app/blog/page.tsx": {
+    "mtime": 1784671924.6193626,
+    "ast_hash": "f37955270d4fb84f1a645ac461e232cb",
+    "semantic_hash": "f37955270d4fb84f1a645ac461e232cb"
+  },
+  "src/app/contato/page.tsx": {
+    "mtime": 1784671902.449605,
+    "ast_hash": "47d8ede30f01de13e6e5235337259b62",
+    "semantic_hash": "47d8ede30f01de13e6e5235337259b62"
+  },
+  "src/app/layout.tsx": {
+    "mtime": 1784671654.2965493,
+    "ast_hash": "b3b0d0d41c0e20505eefb08afcdc62e9",
+    "semantic_hash": "b3b0d0d41c0e20505eefb08afcdc62e9"
+  },
+  "src/app/not-found.tsx": {
+    "mtime": 1784671976.830802,
+    "ast_hash": "7b92d2f94b676abff97218ed59172a6c",
+    "semantic_hash": "7b92d2f94b676abff97218ed59172a6c"
+  },
+  "src/app/page.tsx": {
+    "mtime": 1784671751.8331902,
+    "ast_hash": "d95855caff033165d6159817af4aa4cb",
+    "semantic_hash": "d95855caff033165d6159817af4aa4cb"
+  },
+  "src/app/robots.ts": {
+    "mtime": 1784671968.0288942,
+    "ast_hash": "5a5b7d214fb8df1998c85f44f39b3c50",
+    "semantic_hash": "5a5b7d214fb8df1998c85f44f39b3c50"
+  },
+  "src/app/sitemap.ts": {
+    "mtime": 1784671963.9379385,
+    "ast_hash": "5e74f4feb830fb07266770295579ef11",
+    "semantic_hash": "5e74f4feb830fb07266770295579ef11"
+  },
+  "src/components/Analytics.tsx": {
+    "mtime": 1784671506.6961222,
+    "ast_hash": "c0059c43b336bf2ba9aa0f9fadc232aa",
+    "semantic_hash": "c0059c43b336bf2ba9aa0f9fadc232aa"
+  },
+  "src/components/AvisoRascunho.tsx": {
+    "mtime": 1784671630.9008422,
+    "ast_hash": "32107646a313a146c8480bef30bc3195",
+    "semantic_hash": "32107646a313a146c8480bef30bc3195"
+  },
+  "src/components/BotaoWhatsApp.tsx": {
+    "mtime": 1784671525.017938,
+    "ast_hash": "548ed472a34aa2412dcdd6c229f2c870",
+    "semantic_hash": "548ed472a34aa2412dcdd6c229f2c870"
+  },
+  "src/components/CardProduto.tsx": {
+    "mtime": 1784671600.972143,
+    "ast_hash": "59a117557ff86cf4a07e71a60c804b3c",
+    "semantic_hash": "59a117557ff86cf4a07e71a60c804b3c"
+  },
+  "src/components/Faq.tsx": {
+    "mtime": 1784671619.973952,
+    "ast_hash": "6551ea5e1e93d8f25b6ecea89f336486",
+    "semantic_hash": "6551ea5e1e93d8f25b6ecea89f336486"
+  },
+  "src/components/Footer.tsx": {
+    "mtime": 1784674559.4864633,
+    "ast_hash": "30352932918e0b5b44b8b651206a4537",
+    "semantic_hash": "30352932918e0b5b44b8b651206a4537"
+  },
+  "src/components/Header.tsx": {
+    "mtime": 1784672295.0535448,
+    "ast_hash": "7485ab677f0976694454e3404141dfec",
+    "semantic_hash": "7485ab677f0976694454e3404141dfec"
+  },
+  "src/components/Icones.tsx": {
+    "mtime": 1784671489.3242886,
+    "ast_hash": "5d5193e41be761443d46c08e68d97e86",
+    "semantic_hash": "5d5193e41be761443d46c08e68d97e86"
+  },
+  "src/components/JsonLd.tsx": {
+    "mtime": 1784671440.5417588,
+    "ast_hash": "75cf77b16c8b5e99995e4c15e0390153",
+    "semantic_hash": "75cf77b16c8b5e99995e4c15e0390153"
+  },
+  "src/components/Navegacao.tsx": {
+    "mtime": 1784672642.1393485,
+    "ast_hash": "165a96892e3483f7f01757a9efdea054",
+    "semantic_hash": "165a96892e3483f7f01757a9efdea054"
+  },
+  "src/components/TabelaEspecificacoes.tsx": {
+    "mtime": 1784671610.0310519,
+    "ast_hash": "556f2e6222ba7061a927221af0b3d4e2",
+    "semantic_hash": "556f2e6222ba7061a927221af0b3d4e2"
+  },
+  "src/components/Trilha.tsx": {
+    "mtime": 1784671585.6602967,
+    "ast_hash": "6136404b9781ec419d2c735bf09990d0",
+    "semantic_hash": "6136404b9781ec419d2c735bf09990d0"
+  },
+  "src/content/blocos.ts": {
+    "mtime": 1784670464.4437642,
+    "ast_hash": "80375b13f91601713fc563715f3d90b5",
+    "semantic_hash": "80375b13f91601713fc563715f3d90b5"
+  },
+  "src/content/blog/acionamento.ts": {
+    "mtime": 1784671308.2965083,
+    "ast_hash": "9acdae24b2bf410fdee699ea04bee985",
+    "semantic_hash": "9acdae24b2bf410fdee699ea04bee985"
+  },
+  "src/content/blog/index.ts": {
+    "mtime": 1784671316.862422,
+    "ast_hash": "cef65d6caf7a862007acfcf72e7c4345",
+    "semantic_hash": "cef65d6caf7a862007acfcf72e7c4345"
+  },
+  "src/content/blog/materiais.ts": {
+    "mtime": 1784671270.206892,
+    "ast_hash": "bb96b428008206c5582fff2222960bd6",
+    "semantic_hash": "bb96b428008206c5582fff2222960bd6"
+  },
+  "src/content/blog/nbr-16291.ts": {
+    "mtime": 1784671191.10753,
+    "ast_hash": "55dae03f3d2644186a0f45e8c9e196db",
+    "semantic_hash": "55dae03f3d2644186a0f45e8c9e196db"
+  },
+  "src/content/categorias.ts": {
+    "mtime": 1784670559.0178225,
+    "ast_hash": "6e2b4f8241c1a5461f05d9d12078c403",
+    "semantic_hash": "6e2b4f8241c1a5461f05d9d12078c403"
+  },
+  "src/content/empresa.ts": {
+    "mtime": 1784670426.883138,
+    "ast_hash": "feb57d14ccd1b74e2c52a89c8f808e77",
+    "semantic_hash": "feb57d14ccd1b74e2c52a89c8f808e77"
+  },
+  "src/content/image-manifest.ts": {
+    "mtime": 1784671431.3198497,
+    "ast_hash": "7afb1b79de74a64f2ae31bef36918b70",
+    "semantic_hash": "7afb1b79de74a64f2ae31bef36918b70"
+  },
+  "src/content/produtos/acessorios.ts": {
+    "mtime": 1784671056.1598735,
+    "ast_hash": "a60af252817f232a1fd99c4708b21319",
+    "semantic_hash": "a60af252817f232a1fd99c4708b21319"
+  },
+  "src/content/produtos/chuveiros-e-lava-olhos.ts": {
+    "mtime": 1784670710.4623148,
+    "ast_hash": "1f187a4d48aaa2460d481f7e759dee56",
+    "semantic_hash": "1f187a4d48aaa2460d481f7e759dee56"
+  },
+  "src/content/produtos/chuveiros.ts": {
+    "mtime": 1784670755.4148674,
+    "ast_hash": "1814a05dd4db47385b229a218bc3a796",
+    "semantic_hash": "1814a05dd4db47385b229a218bc3a796"
+  },
+  "src/content/produtos/especiais.ts": {
+    "mtime": 1784670874.6286807,
+    "ast_hash": "51fcb7d0cc226f920cbc6928c9b291d6",
+    "semantic_hash": "51fcb7d0cc226f920cbc6928c9b291d6"
+  },
+  "src/content/produtos/index.ts": {
+    "mtime": 1784671091.5105217,
+    "ast_hash": "c0fa29f409f11319b515444084107ac2",
+    "semantic_hash": "c0fa29f409f11319b515444084107ac2"
+  },
+  "src/content/produtos/lava-olhos.ts": {
+    "mtime": 1784670830.3101218,
+    "ast_hash": "e1fe8bcfe81f8f999f17653b5baa575b",
+    "semantic_hash": "e1fe8bcfe81f8f999f17653b5baa575b"
+  },
+  "src/content/produtos/transportaveis.ts": {
+    "mtime": 1784670929.9711297,
+    "ast_hash": "68e9c9dc38ac1634a470b13c58bf6bbd",
+    "semantic_hash": "68e9c9dc38ac1634a470b13c58bf6bbd"
+  },
+  "src/content/schema.ts": {
+    "mtime": 1784670405.3653522,
+    "ast_hash": "e6d200abcfa77f81dfa22ecfda5f9f8c",
+    "semantic_hash": "e6d200abcfa77f81dfa22ecfda5f9f8c"
+  },
+  "src/lib/schema-org.ts": {
+    "mtime": 1784671435.2108114,
+    "ast_hash": "735d82bc22a4af8823a976d0e895b6a5",
+    "semantic_hash": "735d82bc22a4af8823a976d0e895b6a5"
+  },
+  "src/lib/seo.ts": {
+    "mtime": 1784671375.923301,
+    "ast_hash": "d609815126a91ddf640578ec493f0158",
+    "semantic_hash": "d609815126a91ddf640578ec493f0158"
+  },
+  "src/proxy.ts": {
+    "mtime": 1784672642.1467538,
+    "ast_hash": "e56e181cf814985d32db4e79f665babc",
+    "semantic_hash": "e56e181cf814985d32db4e79f665babc"
+  },
+  "tsconfig.json": {
+    "mtime": 1784670235.7493684,
+    "ast_hash": "ee17fd1c97c735e9f3564e3f5251f125",
+    "semantic_hash": "ee17fd1c97c735e9f3564e3f5251f125"
+  },
+  "README.md": {
+    "mtime": 1784672610.236315,
+    "ast_hash": "1a3b7b47f9e8e6c6b3637039eec556b5",
+    "semantic_hash": "1a3b7b47f9e8e6c6b3637039eec556b5"
+  },
+  "apphosting.yaml": {
+    "mtime": 1784672582.244576,
+    "ast_hash": "c74ad2355f98ff0ddd92e0a5219d14d0",
+    "semantic_hash": "c74ad2355f98ff0ddd92e0a5219d14d0"
+  },
+  "seo-analysis/home.html": {
+    "mtime": 1784667086.5969915,
+    "ast_hash": "ac918145f2143c8a60076fbe45d46e4d",
+    "semantic_hash": "ac918145f2143c8a60076fbe45d46e4d"
+  },
+  "seo-analysis/pages/a-empresa.html": {
+    "mtime": 1784667124.9614277,
+    "ast_hash": "57938c6fcfcb31415fc0ef36fb92e0b7",
+    "semantic_hash": "57938c6fcfcb31415fc0ef36fb92e0b7"
+  },
+  "seo-analysis/pages/acessorios-e-sinalizadores.html": {
+    "mtime": 1784667140.4802704,
+    "ast_hash": "eab95670dfede6ebee102e2c1fe0b17d",
+    "semantic_hash": "eab95670dfede6ebee102e2c1fe0b17d"
+  },
+  "seo-analysis/pages/chuveiros-de-emergencia.html": {
+    "mtime": 1784667124.6764305,
+    "ast_hash": "8ac757f23fc28fe089d09891bc433eec",
+    "semantic_hash": "8ac757f23fc28fe089d09891bc433eec"
+  },
+  "seo-analysis/pages/chuveiros-e-lava-olhos-de-emergencia.html": {
+    "mtime": 1784667124.820884,
+    "ast_hash": "32af24c68681746cadb4829200d313a9",
+    "semantic_hash": "32af24c68681746cadb4829200d313a9"
+  },
+  "seo-analysis/pages/contato.html": {
+    "mtime": 1784667125.4044232,
+    "ast_hash": "5a6b6b8899c6a49551158dd87967d022",
+    "semantic_hash": "5a6b6b8899c6a49551158dd87967d022"
+  },
+  "seo-analysis/pages/especiais.html": {
+    "mtime": 1784667130.1060889,
+    "ast_hash": "fb14bc57bcbe96bea1916bd112506598",
+    "semantic_hash": "fb14bc57bcbe96bea1916bd112506598"
+  },
+  "seo-analysis/pages/home.html": {
+    "mtime": 1784667124.5085192,
+    "ast_hash": "ac918145f2143c8a60076fbe45d46e4d",
+    "semantic_hash": "ac918145f2143c8a60076fbe45d46e4d"
+  },
+  "seo-analysis/pages/lava-olhos-de-emergencia.html": {
+    "mtime": 1784667125.1102653,
+    "ast_hash": "91d5f364199c526b59fbe66f153c9ba8",
+    "semantic_hash": "91d5f364199c526b59fbe66f153c9ba8"
+  },
+  "seo-analysis/pages/pecas-e-acessorios.html": {
+    "mtime": 1784667125.2574246,
+    "ast_hash": "01198bca49270a2cee83688d4c00f548",
+    "semantic_hash": "01198bca49270a2cee83688d4c00f548"
+  },
+  "seo-analysis/pages/sample-page.html": {
+    "mtime": 1784667145.106793,
+    "ast_hash": "f44046af9b0d5fa1fbbc19994ace0963",
+    "semantic_hash": "f44046af9b0d5fa1fbbc19994ace0963"
+  },
+  "seo-analysis/pages/teste-produtos.html": {
+    "mtime": 1784667136.4083116,
+    "ast_hash": "3e226e799bb812853aadab72cb970751",
+    "semantic_hash": "3e226e799bb812853aadab72cb970751"
+  },
+  "seo-analysis/pages/transportaveis.html": {
+    "mtime": 1784667125.5424218,
+    "ast_hash": "31fe10bc82a6c5523ec984b4f81d58ab",
+    "semantic_hash": "31fe10bc82a6c5523ec984b4f81d58ab"
+  },
+  "seo-analysis/plan.md": {
+    "mtime": 1784667496.534672,
+    "ast_hash": "c6d1b945fce9f2193c12369e00e1ba88",
+    "semantic_hash": "c6d1b945fce9f2193c12369e00e1ba88"
+  },
+  "seo-analysis/v1.html": {
+    "mtime": 1784667191.4787533,
+    "ast_hash": "d41d8cd98f00b204e9800998ecf8427e",
+    "semantic_hash": "d41d8cd98f00b204e9800998ecf8427e"
+  },
+  "public/produtos/alca-puxe.webp": {
+    "mtime": 1784671426.530897,
+    "ast_hash": "0c0f98beb687b64de78090c1cb9fb4a1",
+    "semantic_hash": "0c0f98beb687b64de78090c1cb9fb4a1"
+  },
+  "public/produtos/ca.webp": {
+    "mtime": 1784671425.1689103,
+    "ast_hash": "815c669332adf9ab0a3a52778ef03f4a",
+    "semantic_hash": "815c669332adf9ab0a3a52778ef03f4a"
+  },
+  "public/produtos/capa.webp": {
+    "mtime": 1784671425.8749034,
+    "ast_hash": "c60ce8410874f6d2d086306c7b76c1da",
+    "semantic_hash": "c60ce8410874f6d2d086306c7b76c1da"
+  },
+  "public/produtos/cla.webp": {
+    "mtime": 1784671424.9309127,
+    "ast_hash": "a1c753f10aa3e89719e0a107060a8c04",
+    "semantic_hash": "a1c753f10aa3e89719e0a107060a8c04"
+  },
+  "public/produtos/clesp.webp": {
+    "mtime": 1784671425.0219116,
+    "ast_hash": "c43d8d653aad054b7a5bb76ff59a5a4b",
+    "semantic_hash": "c43d8d653aad054b7a5bb76ff59a5a4b"
+  },
+  "public/produtos/clm-e-ag.webp": {
+    "mtime": 1784671422.446937,
+    "ast_hash": "239e90c097669b0322932319bb10d84e",
+    "semantic_hash": "239e90c097669b0322932319bb10d84e"
+  },
+  "public/produtos/clm-e-ai-sd.webp": {
+    "mtime": 1784671420.4889565,
+    "ast_hash": "3835f4013b09422a074e3e5c146484af",
+    "semantic_hash": "3835f4013b09422a074e3e5c146484af"
+  },
+  "public/produtos/clm-e-ai.webp": {
+    "mtime": 1784671420.730954,
+    "ast_hash": "8400d73038142ff9759f99c905146796",
+    "semantic_hash": "8400d73038142ff9759f99c905146796"
+  },
+  "public/produtos/clm-e-ct.webp": {
+    "mtime": 1784671422.5249364,
+    "ast_hash": "78533cf839b1bbd8a8e7cfad56fb5f93",
+    "semantic_hash": "78533cf839b1bbd8a8e7cfad56fb5f93"
+  },
+  "public/produtos/clm-e-pvc.webp": {
+    "mtime": 1784671422.3889377,
+    "ast_hash": "315fb2c89df72df861cbd3ea84123e05",
+    "semantic_hash": "315fb2c89df72df861cbd3ea84123e05"
+  },
+  "public/produtos/clm-ua.webp": {
+    "mtime": 1784671425.7879043,
+    "ast_hash": "d9e6c03ea019e12b09fd3ed576cea800",
+    "semantic_hash": "d9e6c03ea019e12b09fd3ed576cea800"
+  },
+  "public/produtos/clmm.webp": {
+    "mtime": 1784671425.5749063,
+    "ast_hash": "e4cc3b2be9e01afe61bb34088e5760f7",
+    "semantic_hash": "e4cc3b2be9e01afe61bb34088e5760f7"
+  },
+  "public/produtos/cm-ua.webp": {
+    "mtime": 1784671425.7299047,
+    "ast_hash": "2ce2a74fcb549450d33f5acf487870dd",
+    "semantic_hash": "2ce2a74fcb549450d33f5acf487870dd"
+  },
+  "public/produtos/cm.webp": {
+    "mtime": 1784671425.097911,
+    "ast_hash": "0c392672705700192b46a73f9d36094b",
+    "semantic_hash": "0c392672705700192b46a73f9d36094b"
+  },
+  "public/produtos/ducha.webp": {
+    "mtime": 1784671425.9549026,
+    "ast_hash": "254244c1eb0546fdf0812fd40dd7dcc3",
+    "semantic_hash": "254244c1eb0546fdf0812fd40dd7dcc3"
+  },
+  "public/produtos/faixa.webp": {
+    "mtime": 1784671426.0832648,
+    "ast_hash": "e5dc82b3b0484d70fd33c768ee9e1a1a",
+    "semantic_hash": "e5dc82b3b0484d70fd33c768ee9e1a1a"
+  },
+  "public/produtos/jkw-151.webp": {
+    "mtime": 1784671425.513907,
+    "ast_hash": "3e5ba631fb74e3013828cb1e0500938f",
+    "semantic_hash": "3e5ba631fb74e3013828cb1e0500938f"
+  },
+  "public/produtos/la.webp": {
+    "mtime": 1784671425.4489076,
+    "ast_hash": "e33093ddd6f3acdac9e918d7663a0b05",
+    "semantic_hash": "e33093ddd6f3acdac9e918d7663a0b05"
+  },
+  "public/produtos/lm-pvc.webp": {
+    "mtime": 1784671425.3759081,
+    "ast_hash": "6aa795fbd146664b7485f81525df9a96",
+    "semantic_hash": "6aa795fbd146664b7485f81525df9a96"
+  },
+  "public/produtos/lm-ua.webp": {
+    "mtime": 1784671425.6629055,
+    "ast_hash": "9c407b0cdad6061cd280682fdd912fc8",
+    "semantic_hash": "9c407b0cdad6061cd280682fdd912fc8"
+  },
+  "public/produtos/lm.webp": {
+    "mtime": 1784671425.3189087,
+    "ast_hash": "7b1eade479c28158f236680f1ec47ac1",
+    "semantic_hash": "7b1eade479c28158f236680f1ec47ac1"
+  },
+  "public/produtos/ls.webp": {
+    "mtime": 1784671425.2449095,
+    "ast_hash": "e8b99292d2fbe5da97737089e31cb528",
+    "semantic_hash": "e8b99292d2fbe5da97737089e31cb528"
+  },
+  "public/produtos/pedal.webp": {
+    "mtime": 1784671426.023902,
+    "ast_hash": "dfdd2058f08d5ff2ffa058b724f6f1ac",
+    "semantic_hash": "dfdd2058f08d5ff2ffa058b724f6f1ac"
+  },
+  "public/produtos/placa-emergencia.webp": {
+    "mtime": 1784671426.6848953,
+    "ast_hash": "7d8b5bd5898588d6df7781f9df69ba49",
+    "semantic_hash": "7d8b5bd5898588d6df7781f9df69ba49"
+  },
+  "public/produtos/placa-puxe.webp": {
+    "mtime": 1784671426.5948963,
+    "ast_hash": "5ab084f42f77aa27ef6bae6177597ee5",
+    "semantic_hash": "5ab084f42f77aa27ef6bae6177597ee5"
+  },
+  "public/produtos/protetores.webp": {
+    "mtime": 1784671426.1679003,
+    "ast_hash": "443ec4957ce9b707607ac4e0bc95f68b",
+    "semantic_hash": "443ec4957ce9b707607ac4e0bc95f68b"
+  },
+  "public/produtos/scald-valve.webp": {
+    "mtime": 1784671426.2428997,
+    "ast_hash": "2bd0097e87afc11dfc8b1fce89f00b7d",
+    "semantic_hash": "2bd0097e87afc11dfc8b1fce89f00b7d"
+  },
+  "public/produtos/sensor.webp": {
+    "mtime": 1784671426.3163629,
+    "ast_hash": "e955b270391e3bcb1311a6513344327c",
+    "semantic_hash": "e955b270391e3bcb1311a6513344327c"
+  },
+  "public/produtos/sinaleira.webp": {
+    "mtime": 1784671426.392238,
+    "ast_hash": "4f22c086db0eb93ac3bf3518cad01d40",
+    "semantic_hash": "4f22c086db0eb93ac3bf3518cad01d40"
+  },
+  "public/produtos/tampa.webp": {
+    "mtime": 1784671426.4658976,
+    "ast_hash": "8aa36ffd6258c0154f1e7862b8570ecb",
+    "semantic_hash": "8aa36ffd6258c0154f1e7862b8570ecb"
+  },
+  "public/site/empresa.webp": {
+    "mtime": 1784671431.3188496,
+    "ast_hash": "a7c61d616009ada8db7538ada5a5d79d",
+    "semantic_hash": "a7c61d616009ada8db7538ada5a5d79d"
+  },
+  "public/site/hero-2.webp": {
+    "mtime": 1784671430.9108536,
+    "ast_hash": "1d3540fd9bab58ca3ac023faad549600",
+    "semantic_hash": "1d3540fd9bab58ca3ac023faad549600"
+  },
+  "public/site/hero.webp": {
+    "mtime": 1784671430.5518572,
+    "ast_hash": "76c466b669f5f085d84d86cf4afb8ed8",
+    "semantic_hash": "76c466b669f5f085d84d86cf4afb8ed8"
+  },
+  "public/site/logo-branco.webp": {
+    "mtime": 1784671430.28786,
+    "ast_hash": "77d0954537e43ba10535126768cc6fc5",
+    "semantic_hash": "77d0954537e43ba10535126768cc6fc5"
+  },
+  "public/site/logo.webp": {
+    "mtime": 1784671427.728885,
+    "ast_hash": "cd817bd2b210e2850b244b9532fb9fb5",
+    "semantic_hash": "cd817bd2b210e2850b244b9532fb9fb5"
+  },
+  ".agents/skills/caveman-compress/scripts/__init__.py": {
+    "mtime": 1784676160.7941134,
+    "ast_hash": "4bfea67395a7ba04f363df51355d1ef8",
+    "semantic_hash": "4bfea67395a7ba04f363df51355d1ef8"
+  },
+  ".agents/skills/caveman-compress/scripts/__main__.py": {
+    "mtime": 1784676160.7941134,
+    "ast_hash": "746aff14c3a098a28fe9d01d54f174a9",
+    "semantic_hash": "746aff14c3a098a28fe9d01d54f174a9"
+  },
+  ".agents/skills/caveman-compress/scripts/benchmark.py": {
+    "mtime": 1784676160.7942529,
+    "ast_hash": "b4a8fd8070777a15f1f183d7c9992dcd",
+    "semantic_hash": "b4a8fd8070777a15f1f183d7c9992dcd"
+  },
+  ".agents/skills/caveman-compress/scripts/cli.py": {
+    "mtime": 1784676160.7942529,
+    "ast_hash": "993604200cad4bb12bdb2efcdb45fcf5",
+    "semantic_hash": "993604200cad4bb12bdb2efcdb45fcf5"
+  },
+  ".agents/skills/caveman-compress/scripts/compress.py": {
+    "mtime": 1784676160.7943726,
+    "ast_hash": "3ba8e48116e0a534d997f40e2da7f241",
+    "semantic_hash": "3ba8e48116e0a534d997f40e2da7f241"
+  },
+  ".agents/skills/caveman-compress/scripts/detect.py": {
+    "mtime": 1784676160.7943726,
+    "ast_hash": "ebe1feccb3cfc6ec45cbf87951ac863d",
+    "semantic_hash": "ebe1feccb3cfc6ec45cbf87951ac863d"
+  },
+  ".agents/skills/caveman-compress/scripts/validate.py": {
+    "mtime": 1784676160.794441,
+    "ast_hash": "b4f283bc53e5d352fb0120827fd4fafa",
+    "semantic_hash": "b4f283bc53e5d352fb0120827fd4fafa"
+  },
+  ".continue/skills/caveman-compress/scripts/__init__.py": {
+    "mtime": 1784676163.4925811,
+    "ast_hash": "4bfea67395a7ba04f363df51355d1ef8",
+    "semantic_hash": "4bfea67395a7ba04f363df51355d1ef8"
+  },
+  ".continue/skills/caveman-compress/scripts/__main__.py": {
+    "mtime": 1784676163.4925811,
+    "ast_hash": "746aff14c3a098a28fe9d01d54f174a9",
+    "semantic_hash": "746aff14c3a098a28fe9d01d54f174a9"
+  },
+  ".continue/skills/caveman-compress/scripts/benchmark.py": {
+    "mtime": 1784676163.4926789,
+    "ast_hash": "b4a8fd8070777a15f1f183d7c9992dcd",
+    "semantic_hash": "b4a8fd8070777a15f1f183d7c9992dcd"
+  },
+  ".continue/skills/caveman-compress/scripts/cli.py": {
+    "mtime": 1784676163.4926789,
+    "ast_hash": "993604200cad4bb12bdb2efcdb45fcf5",
+    "semantic_hash": "993604200cad4bb12bdb2efcdb45fcf5"
+  },
+  ".continue/skills/caveman-compress/scripts/compress.py": {
+    "mtime": 1784676163.4927404,
+    "ast_hash": "3ba8e48116e0a534d997f40e2da7f241",
+    "semantic_hash": "3ba8e48116e0a534d997f40e2da7f241"
+  },
+  ".continue/skills/caveman-compress/scripts/detect.py": {
+    "mtime": 1784676163.4927404,
+    "ast_hash": "ebe1feccb3cfc6ec45cbf87951ac863d",
+    "semantic_hash": "ebe1feccb3cfc6ec45cbf87951ac863d"
+  },
+  ".continue/skills/caveman-compress/scripts/validate.py": {
+    "mtime": 1784676163.4928577,
+    "ast_hash": "b4f283bc53e5d352fb0120827fd4fafa",
+    "semantic_hash": "b4f283bc53e5d352fb0120827fd4fafa"
+  },
+  ".roo/skills/caveman-compress/scripts/__init__.py": {
+    "mtime": 1784676165.9225223,
+    "ast_hash": "4bfea67395a7ba04f363df51355d1ef8",
+    "semantic_hash": "4bfea67395a7ba04f363df51355d1ef8"
+  },
+  ".roo/skills/caveman-compress/scripts/__main__.py": {
+    "mtime": 1784676165.9225621,
+    "ast_hash": "746aff14c3a098a28fe9d01d54f174a9",
+    "semantic_hash": "746aff14c3a098a28fe9d01d54f174a9"
+  },
+  ".roo/skills/caveman-compress/scripts/benchmark.py": {
+    "mtime": 1784676165.9227622,
+    "ast_hash": "b4a8fd8070777a15f1f183d7c9992dcd",
+    "semantic_hash": "b4a8fd8070777a15f1f183d7c9992dcd"
+  },
+  ".roo/skills/caveman-compress/scripts/cli.py": {
+    "mtime": 1784676165.922796,
+    "ast_hash": "993604200cad4bb12bdb2efcdb45fcf5",
+    "semantic_hash": "993604200cad4bb12bdb2efcdb45fcf5"
+  },
+  ".roo/skills/caveman-compress/scripts/compress.py": {
+    "mtime": 1784676165.9230077,
+    "ast_hash": "3ba8e48116e0a534d997f40e2da7f241",
+    "semantic_hash": "3ba8e48116e0a534d997f40e2da7f241"
+  },
+  ".roo/skills/caveman-compress/scripts/detect.py": {
+    "mtime": 1784676165.9233227,
+    "ast_hash": "ebe1feccb3cfc6ec45cbf87951ac863d",
+    "semantic_hash": "ebe1feccb3cfc6ec45cbf87951ac863d"
+  },
+  ".roo/skills/caveman-compress/scripts/validate.py": {
+    "mtime": 1784676165.9233227,
+    "ast_hash": "b4f283bc53e5d352fb0120827fd4fafa",
+    "semantic_hash": "b4f283bc53e5d352fb0120827fd4fafa"
+  },
+  "skills-lock.json": {
+    "mtime": 1784676165.9572268,
+    "ast_hash": "dac483c468782f443409d7a6c18ba5b0",
+    "semantic_hash": "dac483c468782f443409d7a6c18ba5b0"
+  },
+  ".agents/skills/cavecrew/README.md": {
+    "mtime": 1784676160.7827864,
+    "ast_hash": "31826d02cff90536871a308040ec4eb7",
+    "semantic_hash": "31826d02cff90536871a308040ec4eb7"
+  },
+  ".agents/skills/cavecrew/SKILL.md": {
+    "mtime": 1784676160.7828178,
+    "ast_hash": "f184873cd9c507fa872cc86fd36722e3",
+    "semantic_hash": "f184873cd9c507fa872cc86fd36722e3"
+  },
+  ".agents/skills/caveman-commit/README.md": {
+    "mtime": 1784676160.7868967,
+    "ast_hash": "15f57347c5b5449b79fdf24fdab21f31",
+    "semantic_hash": "15f57347c5b5449b79fdf24fdab21f31"
+  },
+  ".agents/skills/caveman-commit/SKILL.md": {
+    "mtime": 1784676160.7869673,
+    "ast_hash": "1262c2156cd81379fc011d538728079d",
+    "semantic_hash": "1262c2156cd81379fc011d538728079d"
+  },
+  ".agents/skills/caveman-compress/README.md": {
+    "mtime": 1784676160.7931798,
+    "ast_hash": "3bda4de7432953bceb7f230da97f2c12",
+    "semantic_hash": "3bda4de7432953bceb7f230da97f2c12"
+  },
+  ".agents/skills/caveman-compress/SECURITY.md": {
+    "mtime": 1784676160.7931798,
+    "ast_hash": "ab7d04be07bb9b8e851fb2758040432b",
+    "semantic_hash": "ab7d04be07bb9b8e851fb2758040432b"
+  },
+  ".agents/skills/caveman-compress/SKILL.md": {
+    "mtime": 1784676160.7933025,
+    "ast_hash": "7f0c9f11595a612a536954c6be767910",
+    "semantic_hash": "7f0c9f11595a612a536954c6be767910"
+  },
+  ".agents/skills/caveman-help/README.md": {
+    "mtime": 1784676160.796481,
+    "ast_hash": "9c9cf8de78df2a8831c57d6bc88d942b",
+    "semantic_hash": "9c9cf8de78df2a8831c57d6bc88d942b"
+  },
+  ".agents/skills/caveman-help/SKILL.md": {
+    "mtime": 1784676160.796481,
+    "ast_hash": "5dae4d1aebe90b61b0024f037a991bbf",
+    "semantic_hash": "5dae4d1aebe90b61b0024f037a991bbf"
+  },
+  ".agents/skills/caveman-review/README.md": {
+    "mtime": 1784676160.798299,
+    "ast_hash": "ae3bdc81125037690fc50504e2917c83",
+    "semantic_hash": "ae3bdc81125037690fc50504e2917c83"
+  },
+  ".agents/skills/caveman-review/SKILL.md": {
+    "mtime": 1784676160.798299,
+    "ast_hash": "fbb47ffb83198a1ed37a453417e691e2",
+    "semantic_hash": "fbb47ffb83198a1ed37a453417e691e2"
+  },
+  ".agents/skills/caveman-stats/README.md": {
+    "mtime": 1784676160.800127,
+    "ast_hash": "ad1001beaabf7ab16a0113b2efc8b720",
+    "semantic_hash": "ad1001beaabf7ab16a0113b2efc8b720"
+  },
+  ".agents/skills/caveman-stats/SKILL.md": {
+    "mtime": 1784676160.800127,
+    "ast_hash": "5c195635a9349369df34699f8d3b3445",
+    "semantic_hash": "5c195635a9349369df34699f8d3b3445"
+  },
+  ".agents/skills/caveman/README.md": {
+    "mtime": 1784676160.7851374,
+    "ast_hash": "273a25110a7bb5681f488c17417986ce",
+    "semantic_hash": "273a25110a7bb5681f488c17417986ce"
+  },
+  ".agents/skills/caveman/SKILL.md": {
+    "mtime": 1784676160.785177,
+    "ast_hash": "b947774b88d414637bff02071c65dc9b",
+    "semantic_hash": "b947774b88d414637bff02071c65dc9b"
+  },
+  ".continue/skills/cavecrew/README.md": {
+    "mtime": 1784676163.481589,
+    "ast_hash": "31826d02cff90536871a308040ec4eb7",
+    "semantic_hash": "31826d02cff90536871a308040ec4eb7"
+  },
+  ".continue/skills/cavecrew/SKILL.md": {
+    "mtime": 1784676163.481589,
+    "ast_hash": "f184873cd9c507fa872cc86fd36722e3",
+    "semantic_hash": "f184873cd9c507fa872cc86fd36722e3"
+  },
+  ".continue/skills/caveman-commit/README.md": {
+    "mtime": 1784676163.485908,
+    "ast_hash": "15f57347c5b5449b79fdf24fdab21f31",
+    "semantic_hash": "15f57347c5b5449b79fdf24fdab21f31"
+  },
+  ".continue/skills/caveman-commit/SKILL.md": {
+    "mtime": 1784676163.4855616,
+    "ast_hash": "1262c2156cd81379fc011d538728079d",
+    "semantic_hash": "1262c2156cd81379fc011d538728079d"
+  },
+  ".continue/skills/caveman-compress/README.md": {
+    "mtime": 1784676163.491435,
+    "ast_hash": "3bda4de7432953bceb7f230da97f2c12",
+    "semantic_hash": "3bda4de7432953bceb7f230da97f2c12"
+  },
+  ".continue/skills/caveman-compress/SECURITY.md": {
+    "mtime": 1784676163.4916348,
+    "ast_hash": "ab7d04be07bb9b8e851fb2758040432b",
+    "semantic_hash": "ab7d04be07bb9b8e851fb2758040432b"
+  },
+  ".continue/skills/caveman-compress/SKILL.md": {
+    "mtime": 1784676163.4916348,
+    "ast_hash": "7f0c9f11595a612a536954c6be767910",
+    "semantic_hash": "7f0c9f11595a612a536954c6be767910"
+  },
+  ".continue/skills/caveman-help/README.md": {
+    "mtime": 1784676163.4952161,
+    "ast_hash": "9c9cf8de78df2a8831c57d6bc88d942b",
+    "semantic_hash": "9c9cf8de78df2a8831c57d6bc88d942b"
+  },
+  ".continue/skills/caveman-help/SKILL.md": {
+    "mtime": 1784676163.4952161,
+    "ast_hash": "5dae4d1aebe90b61b0024f037a991bbf",
+    "semantic_hash": "5dae4d1aebe90b61b0024f037a991bbf"
+  },
+  ".continue/skills/caveman-review/README.md": {
+    "mtime": 1784676163.4970853,
+    "ast_hash": "ae3bdc81125037690fc50504e2917c83",
+    "semantic_hash": "ae3bdc81125037690fc50504e2917c83"
+  },
+  ".continue/skills/caveman-review/SKILL.md": {
+    "mtime": 1784676163.4970853,
+    "ast_hash": "fbb47ffb83198a1ed37a453417e691e2",
+    "semantic_hash": "fbb47ffb83198a1ed37a453417e691e2"
+  },
+  ".continue/skills/caveman-stats/README.md": {
+    "mtime": 1784676163.4986477,
+    "ast_hash": "ad1001beaabf7ab16a0113b2efc8b720",
+    "semantic_hash": "ad1001beaabf7ab16a0113b2efc8b720"
+  },
+  ".continue/skills/caveman-stats/SKILL.md": {
+    "mtime": 1784676163.4986477,
+    "ast_hash": "5c195635a9349369df34699f8d3b3445",
+    "semantic_hash": "5c195635a9349369df34699f8d3b3445"
+  },
+  ".continue/skills/caveman/README.md": {
+    "mtime": 1784676163.4839258,
+    "ast_hash": "273a25110a7bb5681f488c17417986ce",
+    "semantic_hash": "273a25110a7bb5681f488c17417986ce"
+  },
+  ".continue/skills/caveman/SKILL.md": {
+    "mtime": 1784676163.4839258,
+    "ast_hash": "b947774b88d414637bff02071c65dc9b",
+    "semantic_hash": "b947774b88d414637bff02071c65dc9b"
+  },
+  ".roo/skills/cavecrew/README.md": {
+    "mtime": 1784676165.9108443,
+    "ast_hash": "31826d02cff90536871a308040ec4eb7",
+    "semantic_hash": "31826d02cff90536871a308040ec4eb7"
+  },
+  ".roo/skills/cavecrew/SKILL.md": {
+    "mtime": 1784676165.9108443,
+    "ast_hash": "f184873cd9c507fa872cc86fd36722e3",
+    "semantic_hash": "f184873cd9c507fa872cc86fd36722e3"
+  },
+  ".roo/skills/caveman-commit/README.md": {
+    "mtime": 1784676165.9150255,
+    "ast_hash": "15f57347c5b5449b79fdf24fdab21f31",
+    "semantic_hash": "15f57347c5b5449b79fdf24fdab21f31"
+  },
+  ".roo/skills/caveman-commit/SKILL.md": {
+    "mtime": 1784676165.915116,
+    "ast_hash": "1262c2156cd81379fc011d538728079d",
+    "semantic_hash": "1262c2156cd81379fc011d538728079d"
+  },
+  ".roo/skills/caveman-compress/README.md": {
+    "mtime": 1784676165.9216924,
+    "ast_hash": "3bda4de7432953bceb7f230da97f2c12",
+    "semantic_hash": "3bda4de7432953bceb7f230da97f2c12"
+  },
+  ".roo/skills/caveman-compress/SECURITY.md": {
+    "mtime": 1784676165.9216542,
+    "ast_hash": "ab7d04be07bb9b8e851fb2758040432b",
+    "semantic_hash": "ab7d04be07bb9b8e851fb2758040432b"
+  },
+  ".roo/skills/caveman-compress/SKILL.md": {
+    "mtime": 1784676165.9216924,
+    "ast_hash": "7f0c9f11595a612a536954c6be767910",
+    "semantic_hash": "7f0c9f11595a612a536954c6be767910"
+  },
+  ".roo/skills/caveman-help/README.md": {
+    "mtime": 1784676165.9251554,
+    "ast_hash": "9c9cf8de78df2a8831c57d6bc88d942b",
+    "semantic_hash": "9c9cf8de78df2a8831c57d6bc88d942b"
+  },
+  ".roo/skills/caveman-help/SKILL.md": {
+    "mtime": 1784676165.9251554,
+    "ast_hash": "5dae4d1aebe90b61b0024f037a991bbf",
+    "semantic_hash": "5dae4d1aebe90b61b0024f037a991bbf"
+  },
+  ".roo/skills/caveman-review/README.md": {
+    "mtime": 1784676165.9267023,
+    "ast_hash": "ae3bdc81125037690fc50504e2917c83",
+    "semantic_hash": "ae3bdc81125037690fc50504e2917c83"
+  },
+  ".roo/skills/caveman-review/SKILL.md": {
+    "mtime": 1784676165.9267023,
+    "ast_hash": "fbb47ffb83198a1ed37a453417e691e2",
+    "semantic_hash": "fbb47ffb83198a1ed37a453417e691e2"
+  },
+  ".roo/skills/caveman-stats/README.md": {
+    "mtime": 1784676165.9279003,
+    "ast_hash": "ad1001beaabf7ab16a0113b2efc8b720",
+    "semantic_hash": "ad1001beaabf7ab16a0113b2efc8b720"
+  },
+  ".roo/skills/caveman-stats/SKILL.md": {
+    "mtime": 1784676165.9279003,
+    "ast_hash": "5c195635a9349369df34699f8d3b3445",
+    "semantic_hash": "5c195635a9349369df34699f8d3b3445"
+  },
+  ".roo/skills/caveman/README.md": {
+    "mtime": 1784676165.912672,
+    "ast_hash": "273a25110a7bb5681f488c17417986ce",
+    "semantic_hash": "273a25110a7bb5681f488c17417986ce"
+  },
+  ".roo/skills/caveman/SKILL.md": {
+    "mtime": 1784676165.912672,
+    "ast_hash": "b947774b88d414637bff02071c65dc9b",
+    "semantic_hash": "b947774b88d414637bff02071c65dc9b"
+  }
+}

@@ -1,0 +1,115 @@
+@import "tailwindcss";
+
+/*
+  Design tokens.
+
+  A paleta parte do verde da marca já usado no site atual (#35631e primário,
+  #1d6030 secundário, #2e8b77 acento) — verde é também a cor convencionada
+  para equipamento de emergência, então mantê-la é sinalização, não estética.
+
+  O laranja de emergência entra apenas em CTA e em avisos, para ter contraste
+  máximo contra o verde e nunca competir com ele.
+
+  Site em tema claro apenas: é catálogo industrial, lido em escritório e em
+  celular no chão de fábrica. Tema escuro aqui só aumentaria a superfície de
+  bug sem ganho para o público.
+*/
+@theme {
+  --color-marca-50: #f2f8ef;
+  --color-marca-100: #e0efd9;
+  --color-marca-200: #c3dfb6;
+  --color-marca-300: #9bc888;
+  --color-marca-400: #74ad5e;
+  --color-marca-500: #55913f;
+  --color-marca-600: #3f732e;
+  --color-marca-700: #35631e;
+  --color-marca-800: #2c4f1c;
+  --color-marca-900: #26431b;
+  --color-marca-950: #10250a;
+
+  --color-secundaria-700: #1d6030;
+  --color-acento-500: #2e8b77;
+
+  --color-alerta-500: #e2570d;
+  --color-alerta-600: #c4460a;
+
+  --color-tinta-900: #14201a;
+  --color-tinta-700: #33443b;
+  --color-tinta-500: #5d6d64;
+  --color-tinta-300: #97a49b;
+
+  --font-sans: var(--fonte-sans), ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+
+  --container-conteudo: 72rem;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    background-color: #fff;
+    color: var(--color-tinta-900);
+    font-family: var(--font-sans);
+    text-rendering: optimizeLegibility;
+  }
+
+  /* Reserva de espaço: nenhuma imagem pode empurrar layout (CLS = 0). */
+  img,
+  picture,
+  svg {
+    max-width: 100%;
+    height: auto;
+  }
+
+  :focus-visible {
+    outline: 3px solid var(--color-acento-500);
+    outline-offset: 2px;
+  }
+
+  /* Respeita quem pediu menos animação no sistema. */
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+@layer components {
+  .conteudo {
+    width: 100%;
+    max-width: var(--container-conteudo);
+    margin-inline: auto;
+    padding-inline: 1.25rem;
+  }
+
+  /* Corpo de texto longo: artigos e descrições de produto. */
+  .prosa {
+    color: var(--color-tinta-700);
+    line-height: 1.75;
+  }
+  .prosa > * + * {
+    margin-top: 1.15em;
+  }
+  .prosa strong {
+    color: var(--color-tinta-900);
+    font-weight: 600;
+  }
+  .prosa a {
+    color: var(--color-marca-700);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+  .prosa a:hover {
+    color: var(--color-marca-800);
+  }
+}

@@ -1,0 +1,38 @@
+# Firebase App Hosting
+# https://firebase.google.com/docs/app-hosting/configure
+#
+# O site é inteiramente estático (SSG): as 48 rotas são pré-renderizadas no
+# build e servidas pelo Cloud CDN. O backend praticamente não é tocado — só
+# existe por causa do proxy que devolve 410 em /sample-page/ e /teste-produtos/.
+#
+# Por isso `minInstances: 0`: escala a zero, custo próximo de zero, e o cold
+# start não afeta o visitante, que recebe a página do edge.
+
+runConfig:
+  minInstances: 0
+  maxInstances: 3
+  concurrency: 80
+  cpu: 1
+  memoryMiB: 512
+
+env:
+  # ID do Google Tag / GA4. Sem esta variável o Analytics não é carregado —
+  # nenhum script de terceiro entra na página.
+  #
+  # A auditoria registra o contêiner GTM já instalado no site antigo:
+  # GT-MBH6J9B4. Confirme no Google Analytics se este é o ID a usar ou se
+  # existe um measurement ID G-XXXXXXX dedicado antes de publicar.
+  - variable: NEXT_PUBLIC_GA_ID
+    value: ''
+    availability:
+      - BUILD
+      - RUNTIME
+
+  # Libera o build com dados provisórios. Deve existir APENAS em canal de
+  # preview. Em produção, deixe ausente para que o portão bloqueie a publicação
+  # de vazão, dimensão ou preço não conferidos.
+  #
+  # - variable: NEXT_PUBLIC_ALLOW_DRAFT
+  #   value: '1'
+  #   availability:
+  #     - BUILD

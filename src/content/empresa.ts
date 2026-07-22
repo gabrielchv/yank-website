@@ -14,9 +14,25 @@ export const empresa = {
   nomeLegal: 'Yank EPC — Chuveiros e Lava-Olhos de Emergência',
   nomeAnterior: 'Yank Metalúrgica Ltda',
   descricaoCurta:
-    'Fabricante de chuveiros e lava-olhos de emergência há mais de 30 anos, com equipamentos conforme a ABNT NBR 16291.',
-  fundacaoTexto: 'mais de 30 anos',
+    'Fabricante de chuveiros e lava-olhos de emergência desde 1995, com equipamentos conforme a ABNT NBR 16291.',
+  /**
+   * Ano declarado pela empresa em `source-files/catalogo.md` e confirmado com
+   * ela. O CNPJ 66.900.820/0001-48 registra abertura em 18/09/1991, sob a
+   * antecessora Jankowiski Metalúrgica de Precisão — 1995 é o marco da
+   * fabricação de chuveiros e lava-olhos, que é o que o site comunica.
+   */
+  fundadaEm: 1995,
+  fundacaoTexto: 'desde 1995',
 
+  /**
+   * Endereço operacional, confirmado com a empresa e usado em todo o site,
+   * no rodapé e no JSON-LD.
+   *
+   * Nota para quem cuidar de SEO local: o CNPJ 66.900.820/0001-48 ainda está
+   * registrado na Rua Cidade de São Sebastião, 35 — Jardim de Lucca. Vale
+   * alinhar o cadastro e o Google Business Profile a este endereço, porque NAP
+   * divergente entre as fontes é um dos sinais que mais atrapalham busca local.
+   */
   endereco: {
     logradouro: 'Rua Adelino Gasparine, 251',
     bairro: 'Jardim Verona',
@@ -31,7 +47,7 @@ export const empresa = {
     /** formato E.164, para links tel: e schema */
     e164: '+5511913006556',
     /** como é exibido no site */
-    exibicao: '(11) 9.1300-6556',
+    exibicao: '(11) 91300-6556',
   },
 
   email: 'yank@yank.com.br',
@@ -63,7 +79,20 @@ export const empresa = {
     facebook: 'https://www.facebook.com/profile.php?id=61570122296368',
   },
 
-  certificacoes: ['Sistema de qualidade certificado pela SGS', 'ISO 9001'],
+  /**
+   * ⚠️ Lista deliberadamente vazia.
+   *
+   * O site anterior anunciava "sistema de qualidade certificado pela SGS /
+   * ISO 9001" no presente. O certificado localizado é o SGS ICS **BR12/7085**,
+   * emitido para Yank Metalúrgica Ltda contra a **ISO 9001:2008**, válido de
+   * 28/07/2012 a **27/07/2015**. Não foi encontrada renovação, e a própria
+   * ISO 9001:2008 foi substituída pela edição 2015.
+   *
+   * Anunciar certificação vencida é risco jurídico (CDC/CONAR), não só de SEO.
+   * Para republicar, basta preencher esta lista com o certificado vigente —
+   * o rodapé volta a exibi-la sozinho.
+   */
+  certificacoes: [] as readonly string[],
 
   missao:
     'Desenvolver e fornecer soluções inovadoras em chuveiros e lava-olhos de emergência, garantindo qualidade, durabilidade e segurança, protegendo vidas no ambiente industrial.',

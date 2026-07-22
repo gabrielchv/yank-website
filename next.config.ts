@@ -8,11 +8,19 @@ const nextConfig: NextConfig = {
   */
   trailingSlash: true,
 
+  /*
+    Saída autocontida para o container do Cloud Run: o Next só copia as
+    dependências que o rastreamento de módulos provou serem necessárias, o que
+    tira ~90% do node_modules da imagem. Imagem menor significa cold start mais
+    curto — que, com min-instances=0, é o que o visitante sente.
+  */
+  output: 'standalone',
+
   reactStrictMode: true,
   poweredByHeader: false,
 
   images: {
-    // As imagens são locais e já reencodadas por scripts/fetch-images.ts.
+    // As imagens são locais e já reencodadas por scripts/build-images.ts.
     formats: ['image/avif', 'image/webp'],
     // Larguras realmente usadas pelo layout — evita gerar variantes ociosas.
     deviceSizes: [400, 640, 828, 1080, 1400],

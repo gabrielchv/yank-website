@@ -1,0 +1,23 @@
+# Nada aqui é necessário para construir a imagem — e cada arquivo enviado é
+# tempo de upload para o Cloud Build.
+node_modules
+.next
+.git
+.gitignore
+
+# Ferramentas de agente e artefatos de análise, específicos da máquina local.
+.agents
+.claude
+.continue
+.roo
+graphify-out
+skills-lock.json
+tsconfig.tsbuildinfo
+
+# Insumos de conteúdo e auditoria: entram no repositório, não na imagem.
+seo-analysis
+source-files
+
+*.log
+.env*.local
+.DS_Store

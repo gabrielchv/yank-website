@@ -3,9 +3,11 @@
  *
  * Roda antes do build (`prebuild`). Em produção, aborta se algum produto ainda
  * estiver com `dataStatus: 'draft'` — impedindo publicar vazão, dimensão ou
- * preço inventados dentro do schema Product. Isso é problema de SEO (o Google
- * aplica ação manual a preço falso) e, num equipamento de segurança, problema
- * de verdade.
+ * peso inventados dentro do schema Product. Isso é problema de SEO e, num
+ * equipamento de segurança, problema de verdade.
+ *
+ * Preço não é verificado aqui porque não existe no catálogo: a venda é sob
+ * orçamento e nenhum valor é publicado.
  *
  * Para liberar dev/preview com os dados provisórios:
  *   NEXT_PUBLIC_ALLOW_DRAFT=1 npm run build
@@ -34,8 +36,7 @@ if (rascunhos.length === 0) {
 
 console.log('\nProdutos com dados provisórios:\n')
 for (const p of rascunhos) {
-  const pendentes = p.especificacoes.filter((e) => e.provisorio).map((e) => e.label)
-  const itens = [...pendentes, ...(p.preco !== undefined ? ['Preço'] : [])]
+  const itens = p.especificacoes.filter((e) => e.provisorio).map((e) => e.label)
   console.log(`  ${p.codigo.padEnd(12)} ${p.slug}`)
   console.log(`  ${' '.repeat(12)} falta conferir: ${itens.join(', ') || '(nada — basta marcar verified)'}\n`)
 }

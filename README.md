@@ -20,34 +20,38 @@ npm run build          # BLOQUEIA enquanto houver produto em rascunho
 NEXT_PUBLIC_ALLOW_DRAFT=1 npm run build   # preview com dados provisórios
 ```
 
+## Preço: não existe no site
+
+Decisão de negócio: a venda é **sob orçamento** e nenhum valor é publicado. Não
+há campo `preco` no schema, não há preço na página e a `Offer` do JSON-LD vai
+sem `price` de propósito — declarar valor inventado gera ação manual do Google.
+A página de produto traz um bloco "Orçamento sob consulta" que emenda no
+WhatsApp.
+
 ## O portão de dados provisórios
 
-Os 30 produtos estão com `dataStatus: 'draft'`, porque as especificações
-numéricas (vazão, dimensões, peso) e os preços são **provisórios** — foram
-gerados para o layout ser desenhado contra conteúdo realista, não vieram do
-catálogo.
+Os 30 produtos estão `dataStatus: 'verified'`: tudo que aparece na tela veio de
+`source-files/catalogo.md`, o catálogo do fabricante.
 
-`npm run build` **falha de propósito** enquanto isso for verdade. Publicar um
-preço inventado dentro do schema `Product` gera ação manual do Google, e uma
-vazão errada num equipamento de segurança é problema além do SEO.
+**O que foi removido:** vazão, pressão, altura, dimensões e peso. Esses números
+não constam do catálogo — estavam no repositório apenas como mock de layout, e
+número inventado num equipamento de segurança é problema além do SEO.
 
-Rode `npm run check:data` para ver exatamente o que falta em cada produto.
+O portão continua armado para dado novo. Ao acrescentar uma especificação que
+ainda não foi conferida, marque `provisorio: true` na linha e volte o produto
+para `dataStatus: 'draft'`: `npm run build` passa a falhar até a conferência.
+Rode `npm run check:data` para ver o que está pendente.
 
-### Como publicar um produto
+### Quando a ficha técnica do fabricante chegar
 
-Nos arquivos de `src/content/produtos/`:
+Nos arquivos de `src/content/produtos/`, acrescente as linhas em
+`especificacoes` — nada mais precisa mudar, a tabela passa a exibi-las e elas
+entram no `additionalProperty` do schema `Product`.
 
-1. Substitua os valores pelos reais do catálogo.
-2. Remova `provisorio: true` de cada linha conferida.
-3. Ajuste ou remova `preco`.
-4. Mude `dataStatus` para `'verified'`.
-
-Nada mais precisa mudar: a tabela passa a exibir as linhas, o preço entra no
-`Offer` do JSON-LD e o produto sai da lista do portão.
-
-**O que já é real e não precisa conferência:** os `bullets` (extraídos do site
-atual), as descrições, aplicações, conformidade e FAQ — escritos a partir da
-NBR 16291 e do domínio, não de dado de catálogo.
+**Fonte de cada campo:** `especificacoes`, `bullets`, material, bitola e
+acionamento vêm do catálogo e das fotos de produto em `public/produtos/`. As
+descrições, aplicações, conformidade e FAQ são conhecimento de domínio escrito
+a partir da NBR 16291 — não são dado de catálogo.
 
 ## Estrutura
 
@@ -65,7 +69,7 @@ src/
 │   ├── produtos/               um arquivo por categoria
 │   ├── blog/
 │   ├── empresa.ts              NAP — fonte única de site, rodapé e JSON-LD
-│   └── image-manifest.ts       GERADO por scripts/fetch-images.ts
+│   └── image-manifest.ts       GERADO por scripts/build-images.ts
 ├── lib/                        seo.ts, schema-org.ts
 └── proxy.ts                    410 nas duas páginas-lixo do WordPress
 ```

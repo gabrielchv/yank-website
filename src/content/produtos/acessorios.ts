@@ -4,12 +4,11 @@ import { faqGerais } from '../blocos'
 const CATEGORIA = 'pecas-e-acessorios'
 
 /**
- * ⚠️ `preco` é MOCK em todos os itens (dataStatus 'draft').
+ * Acessórios e peças de reposição, conforme a lista de `source-files/catalogo.md`.
  *
- * Diferente dos equipamentos, os acessórios não têm nenhuma especificação
- * publicada no site atual — então aqui há menos dado real a preservar. As
- * descrições são conhecimento de domínio; medidas e compatibilidade precisam
- * vir do catálogo antes de publicar.
+ * O catálogo nomeia as peças mas não publica medida, bitola ou compatibilidade
+ * item a item — por isso `especificacoes` fica vazio aqui de propósito. As
+ * descrições são conhecimento de domínio, não dado de catálogo.
  */
 
 type Entrada = {
@@ -26,7 +25,6 @@ type Entrada = {
   faq: Faq[]
   alt: string
   relacionados: string[]
-  preco: number
 }
 
 const conformidadeAcessorio = [
@@ -67,8 +65,7 @@ function montar(e: Entrada, ordem: number): Produto {
     imagens: [{ chave: e.chave, alt: e.alt }],
     relacionados: e.relacionados,
     artigos: ['nbr-16291-o-que-a-norma-exige'],
-    preco: e.preco,
-    dataStatus: 'draft',
+    dataStatus: 'verified',
     ordem,
   }
 }
@@ -103,7 +100,6 @@ const entradas: Entrada[] = [
     ],
     alt: 'Ducha manual com mangote flexível para chuveiro de emergência, com gatilho de acionamento',
     relacionados: ['clm-e-ai-sd-aco-inox-com-ducha', 'pedal-de-acionamento', 'alca-puxe'],
-    preco: 390,
   },
   {
     slug: 'pedal-de-acionamento',
@@ -134,7 +130,6 @@ const entradas: Entrada[] = [
     ],
     alt: 'Pedal metálico de acionamento para chuveiro e lava-olhos de emergência',
     relacionados: ['alca-puxe', 'ducha-para-chuveiro-de-emergencia', 'ls-lava-olhos-de-bancada'],
-    preco: 290,
   },
   {
     slug: 'alca-puxe',
@@ -165,7 +160,6 @@ const entradas: Entrada[] = [
     ],
     alt: 'Alça puxe metálica para acionamento de chuveiro de emergência',
     relacionados: ['pedal-de-acionamento', 'placa-puxe', 'clesp-plataforma-unica'],
-    preco: 180,
   },
   {
     slug: 'scald-valve',
@@ -196,7 +190,6 @@ const entradas: Entrada[] = [
     ],
     alt: 'Scald valve, válvula de proteção térmica para linha de alimentação de chuveiro de emergência',
     relacionados: ['jkw-151-completo-com-sensores', 'sensor-de-fluxo', 'sinaleira'],
-    preco: 1190,
   },
   {
     slug: 'sensor-de-fluxo',
@@ -227,7 +220,6 @@ const entradas: Entrada[] = [
     ],
     alt: 'Sensor de fluxo para detecção de acionamento de chuveiro de emergência, com saída para alarme',
     relacionados: ['sinaleira', 'jkw-151-completo-com-sensores', 'scald-valve'],
-    preco: 890,
   },
   {
     slug: 'sinaleira',
@@ -258,7 +250,6 @@ const entradas: Entrada[] = [
     ],
     alt: 'Sinaleira luminosa de sinalização de acionamento de chuveiro de emergência',
     relacionados: ['sensor-de-fluxo', 'clm-e-ai-sd-aco-inox-com-ducha', 'jkw-151-completo-com-sensores'],
-    preco: 490,
   },
   {
     slug: 'capa-protetora',
@@ -289,7 +280,6 @@ const entradas: Entrada[] = [
     ],
     alt: 'Capa protetora para chuveiro e lava-olhos de emergência instalado em área externa',
     relacionados: ['protetores', 'tampa', 'clm-e-ai-aco-inox-304'],
-    preco: 240,
   },
   {
     slug: 'protetores',
@@ -320,7 +310,6 @@ const entradas: Entrada[] = [
     ],
     alt: 'Protetores para os crivos da bacia de lava-olhos de emergência',
     relacionados: ['capa-protetora', 'tampa', 'ls-lava-olhos-de-bancada'],
-    preco: 120,
   },
   {
     slug: 'tampa',
@@ -351,7 +340,6 @@ const entradas: Entrada[] = [
     ],
     alt: 'Tampa de proteção para bacia de lava-olhos de emergência',
     relacionados: ['protetores', 'capa-protetora', 'lm-lava-olhos-de-coluna'],
-    preco: 140,
   },
   {
     slug: 'placa-de-sinalizacao-de-emergencia',
@@ -382,7 +370,6 @@ const entradas: Entrada[] = [
     ],
     alt: 'Placa de sinalização de chuveiro e lava-olhos de emergência conforme a NR-26',
     relacionados: ['placa-puxe', 'faixa-demarcatoria', 'clm-e-ai-aco-inox-304'],
-    preco: 90,
   },
   {
     slug: 'placa-puxe',
@@ -413,7 +400,6 @@ const entradas: Entrada[] = [
     ],
     alt: 'Placa indicativa PUXE para acionamento de chuveiro de emergência',
     relacionados: ['placa-de-sinalizacao-de-emergencia', 'alca-puxe', 'faixa-demarcatoria'],
-    preco: 80,
   },
   {
     slug: 'faixa-demarcatoria',
@@ -444,7 +430,6 @@ const entradas: Entrada[] = [
     ],
     alt: 'Faixa demarcatória de piso para delimitar a área de chuveiro de emergência',
     relacionados: ['placa-de-sinalizacao-de-emergencia', 'placa-puxe', 'protetores'],
-    preco: 110,
   },
 ]
 

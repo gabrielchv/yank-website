@@ -19,6 +19,15 @@ type Props = {
   /** Código do modelo, ex.: 'CLM-E AI'. Sem isso, usa a mensagem genérica. */
   contexto?: string
   variante?: 'primario' | 'secundario' | 'compacto'
+  /**
+   * Utilitários de `display`, para esconder o botão por breakpoint.
+   *
+   * Precisa ser prop, e não `className`: o Tailwind ordena a folha por utilitário,
+   * não pela ordem em que as classes aparecem na string. Como `.inline-flex` é
+   * emitido depois de `.hidden`, um `className="hidden ..."` perdia da classe
+   * base e o botão nunca sumia. Aqui a classe base é substituída, não somada.
+   */
+  display?: string
   className?: string
   children?: React.ReactNode
 }
@@ -35,6 +44,7 @@ const estilos = {
 export function BotaoWhatsApp({
   contexto,
   variante = 'primario',
+  display = 'inline-flex',
   className = '',
   children,
 }: Props) {
@@ -44,7 +54,7 @@ export function BotaoWhatsApp({
       target="_blank"
       rel="noopener noreferrer"
       onClick={() => registrarEvento('whatsapp_click', { modelo: contexto ?? 'geral' })}
-      className={`inline-flex items-center justify-center gap-2 rounded-lg transition-colors ${estilos[variante]} ${className}`}
+      className={`${display} items-center justify-center gap-2 rounded-lg transition-colors ${estilos[variante]} ${className}`}
     >
       <IconeWhatsApp className="h-5 w-5 shrink-0" />
       {children ?? 'Solicitar orçamento'}

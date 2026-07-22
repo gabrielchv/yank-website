@@ -9,7 +9,7 @@ import {
 
 const CATEGORIA = 'transportaveis'
 
-/** ⚠️ Especificações marcadas `provisorio: true` e `preco` são MOCK — ver produtos/chuveiros-e-lava-olhos.ts */
+/** Dados conforme `source-files/catalogo.md`. Sem vazão/pressão/peso: o catálogo não os declara. */
 
 /** Bullets idênticos nos três modelos — vieram assim do site atual. */
 const bulletsUA = [
@@ -23,11 +23,11 @@ const bulletsUA = [
 ]
 
 const especificacoesUA = [
-  { label: 'Material da estrutura', valor: 'Aço inoxidável', provisorio: false },
-  { label: 'Bitola', valor: '3/4" ou 1"', provisorio: false },
-  { label: 'Cilindro', valor: 'Aço inoxidável', provisorio: false },
-  { label: 'Capacidade', valor: '50 ou 75 litros', provisorio: false },
-  { label: 'Mobilidade', valor: 'Carrinho transportável', provisorio: false },
+  { label: 'Material da estrutura', valor: 'Aço inoxidável' },
+  { label: 'Bitola', valor: '3/4" ou 1"' },
+  { label: 'Cilindro', valor: 'Aço inoxidável' },
+  { label: 'Capacidade', valor: '50 ou 75 litros' },
+  { label: 'Mobilidade', valor: 'Carrinho transportável' },
 ]
 
 const faqVolume = {
@@ -63,12 +63,7 @@ export const transportaveis: Produto[] = [
     bullets: bulletsUA,
     especificacoes: [
       ...especificacoesUA,
-      { label: 'Configuração', valor: 'Chuveiro + lava-olhos conjugados', provisorio: false },
-      { label: 'Vazão do chuveiro', valor: '76 L/min', provisorio: true },
-      { label: 'Vazão do lava-olhos', valor: '12 L/min', provisorio: true },
-      { label: 'Pressão de trabalho', valor: '6 bar', provisorio: true },
-      { label: 'Dimensões (L × P × A)', valor: '700 × 800 × 2.000 mm', provisorio: true },
-      { label: 'Peso vazio', valor: '48 kg', provisorio: true },
+      { label: 'Configuração', valor: 'Chuveiro + lava-olhos conjugados' },
     ],
     aplicacoes: aplicacoesCampo,
     conformidade: conformidadeBase,
@@ -78,13 +73,12 @@ export const transportaveis: Produto[] = [
     imagens: [
       {
         chave: 'clm-ua',
-        alt: 'Chuveiro e lava-olhos de emergência portátil CLM-UA em aço inox, com cilindro pressurizado e carrinho transportável',
+        alt: 'Chuveiro e lava-olhos de emergência portátil CLM-UA sobre carrinho de duas rodas, com cilindro pressurizado de unidade autônoma, haste de chuveiro, bacia de lava-olhos e placa de sinalização',
       },
     ],
     relacionados: ['cm-ua-chuveiro-portatil', 'lm-ua-lava-olhos-portatil', 'clm-e-ai-aco-inox-304'],
     artigos: ['nbr-16291-o-que-a-norma-exige'],
-    preco: 8290,
-    dataStatus: 'draft',
+    dataStatus: 'verified',
     ordem: 1,
   },
 
@@ -108,11 +102,7 @@ export const transportaveis: Produto[] = [
     bullets: bulletsUA,
     especificacoes: [
       ...especificacoesUA,
-      { label: 'Configuração', valor: 'Chuveiro isolado', provisorio: false },
-      { label: 'Vazão', valor: '76 L/min', provisorio: true },
-      { label: 'Pressão de trabalho', valor: '6 bar', provisorio: true },
-      { label: 'Dimensões (L × P × A)', valor: '700 × 800 × 2.000 mm', provisorio: true },
-      { label: 'Peso vazio', valor: '42 kg', provisorio: true },
+      { label: 'Configuração', valor: 'Chuveiro isolado' },
     ],
     aplicacoes: aplicacoesCampo,
     conformidade: conformidadeBase,
@@ -132,13 +122,12 @@ export const transportaveis: Produto[] = [
     imagens: [
       {
         chave: 'cm-ua',
-        alt: 'Chuveiro de emergência portátil CM-UA em aço inox, com cilindro pressurizado de 50 litros e carrinho transportável',
+        alt: 'Chuveiro de emergência portátil CM-UA em aço inox, com cilindro pressurizado e carrinho transportável',
       },
     ],
     relacionados: ['clm-ua-chuveiro-lava-olhos-portatil', 'lm-ua-lava-olhos-portatil', 'cm-acionamento-manual'],
     artigos: ['nbr-16291-o-que-a-norma-exige'],
-    preco: 6490,
-    dataStatus: 'draft',
+    dataStatus: 'verified',
     ordem: 2,
   },
 
@@ -162,11 +151,7 @@ export const transportaveis: Produto[] = [
     bullets: bulletsUA,
     especificacoes: [
       ...especificacoesUA,
-      { label: 'Configuração', valor: 'Lava-olhos isolado', provisorio: false },
-      { label: 'Vazão', valor: '12 L/min', provisorio: true },
-      { label: 'Pressão de trabalho', valor: '6 bar', provisorio: true },
-      { label: 'Autonomia estimada (75 L)', valor: '6 minutos de irrigação contínua', provisorio: true },
-      { label: 'Peso vazio', valor: '38 kg', provisorio: true },
+      { label: 'Configuração', valor: 'Lava-olhos isolado' },
     ],
     aplicacoes: aplicacoesCampo,
     conformidade: conformidadeBase,
@@ -191,8 +176,7 @@ export const transportaveis: Produto[] = [
     ],
     relacionados: ['clm-ua-chuveiro-lava-olhos-portatil', 'cm-ua-chuveiro-portatil', 'lm-lava-olhos-de-coluna'],
     artigos: ['nbr-16291-o-que-a-norma-exige'],
-    preco: 5990,
-    dataStatus: 'draft',
+    dataStatus: 'verified',
     ordem: 3,
   },
 ]

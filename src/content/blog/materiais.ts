@@ -14,7 +14,7 @@ export const materiais: Artigo = {
     {
       tipo: 'p',
       texto:
-        'Chuveiros e lava-olhos de emergência são fabricados basicamente em três materiais: aço inox AISI 304, PVC e aço galvanizado com pintura epóxi. Os três atendem à ABNT NBR 16291 e, no dia da instalação, fazem exatamente a mesma coisa. A diferença aparece depois — e aparece de formas distintas em cada caso.',
+        'Chuveiros e lava-olhos de emergência são fabricados basicamente em três materiais: aço inox AISI 304, PVC e aço galvanizado com pintura. Os três atendem à ABNT NBR 16291 e, no dia da instalação, fazem exatamente a mesma coisa. A diferença aparece depois — e aparece de formas distintas em cada caso.',
     },
     {
       tipo: 'p',
@@ -81,7 +81,7 @@ export const materiais: Artigo = {
     {
       tipo: 'p',
       texto:
-        'O aço galvanizado com pintura epóxi verde é a opção de menor custo inicial e continua sendo uma escolha correta em áreas internas de agressividade moderada: oficinas, almoxarifados de produto químico, centros de distribuição, áreas de produção sem exposição química direta.',
+        'O aço galvanizado com pintura verde é a opção de menor custo inicial e continua sendo uma escolha correta em áreas internas de agressividade moderada: oficinas, almoxarifados de produto químico, centros de distribuição, áreas de produção sem exposição química direta.',
     },
     {
       tipo: 'p',

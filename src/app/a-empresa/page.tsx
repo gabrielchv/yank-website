@@ -12,9 +12,9 @@ import { schemaTrilha, type ItemTrilha } from '@/lib/schema-org'
 import { construirMetadata } from '@/lib/seo'
 
 export const metadata: Metadata = construirMetadata({
-  title: 'A Empresa — 30 Anos em Equipamentos de Emergência | Yank',
+  title: 'A Empresa — Fabricante desde 1995 | Yank EPC',
   description:
-    'Yank EPC, antiga Yank Metalúrgica: mais de 30 anos fabricando chuveiros e lava-olhos de emergência em Itatiba/SP. Certificação SGS e ISO 9001.',
+    'Yank EPC, antiga Yank Metalúrgica: fabricante de chuveiros e lava-olhos de emergência em Itatiba/SP desde 1995. Fabricação própria e montada.',
   caminho: '/a-empresa/',
 })
 
@@ -23,9 +23,14 @@ const trilha: ItemTrilha[] = [
   { nome: 'A Empresa', caminho: '/a-empresa/' },
 ]
 
-const normas = ['ABNT NBR 16291:2014', 'ANSI/ISEA Z358.1', 'DIN', 'Diretivas da União Europeia']
+/*
+  Só normas que o catálogo do fabricante declara. O site antigo listava também
+  "DIN" e "Diretivas da União Europeia", sem indicar qual norma DIN ou qual
+  diretiva — claim genérico e não verificável, removido.
+*/
+const normas = ['ABNT NBR 16291:2014', 'ANSI/ISEA Z358.1-2014 (R2020)', 'NR-26 e ABNT NBR 7195']
 
-const materiais = ['Aço inox AISI 304', 'PVC', 'Aço galvanizado com pintura epóxi']
+const materiais = ['Aço inox AISI 304', 'PVC', 'Aço galvanizado com pintura verde']
 
 const configuracoes = [
   'Manuais e semiautomáticos',
@@ -49,7 +54,7 @@ export default function PaginaEmpresa() {
       <header className="conteudo pt-10 lg:pt-14">
         <div className="max-w-3xl">
           <h1 className="text-3xl font-bold tracking-tight text-tinta-900 sm:text-4xl lg:text-5xl">
-            Fabricante de equipamentos de emergência há mais de 30 anos
+            Fabricante de equipamentos de emergência desde 1995
           </h1>
           <p className="mt-5 text-lg leading-relaxed text-tinta-700">
             A {empresa.nome}, anteriormente conhecida como {empresa.nomeAnterior}, é referência no
@@ -86,10 +91,9 @@ export default function PaginaEmpresa() {
               com seus colaboradores.
             </p>
             <p>
-              Todos os produtos são fabricados sob controle de qualidade rigoroso, com sistema
-              certificado pela <strong>SGS</strong> e alinhado à <strong>ISO 9001</strong>. Mais do
-              que equipamentos, entregamos soluções confiáveis para ambientes industriais que
-              exigem ação em segundos.
+              Todos os produtos são fabricados sob controle de qualidade em todas as etapas, e saem
+              da fábrica montados e prontos para instalação. Mais do que equipamentos, entregamos
+              soluções confiáveis para ambientes industriais que exigem ação em segundos.
             </p>
 
             <h3 className="pt-4 text-xl font-bold text-tinta-900">
@@ -98,7 +102,7 @@ export default function PaginaEmpresa() {
             <p>
               Boa parte de quem vende chuveiro e lava-olhos de emergência no Brasil é revenda. A
               diferença aparece quando a sua área não cabe no catálogo: um agente químico que ataca
-              o inox, um layout que exige conjugado múltiplo, uma rede com pressão limitada, uma
+              o inox, uma rede com pressão limitada, uma altura de instalação fora do padrão, uma
               exigência de integração com o alarme da planta.
             </p>
             <p>

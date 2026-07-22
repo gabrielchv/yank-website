@@ -1,4 +1,4 @@
-// GERADO por scripts/fetch-images.ts — não editar à mão.
+// GERADO por scripts/build-images.ts — não editar à mão.
 // Dimensões reais de cada arquivo, usadas para reservar espaço no layout (CLS = 0).
 
 export type ImagemManifest = { src: string; width: number; height: number }
@@ -11,8 +11,8 @@ export const imageManifest = {
   },
   "clm-e-ai": {
     "src": "/produtos/clm-e-ai.webp",
-    "width": 1130,
-    "height": 1424
+    "width": 1131,
+    "height": 1600
   },
   "clm-e-pvc": {
     "src": "/produtos/clm-e-pvc.webp",
@@ -21,8 +21,8 @@ export const imageManifest = {
   },
   "clm-e-ag": {
     "src": "/produtos/clm-e-ag.webp",
-    "width": 480,
-    "height": 640
+    "width": 1132,
+    "height": 1600
   },
   "clm-e-ct": {
     "src": "/produtos/clm-e-ct.webp",
@@ -156,8 +156,8 @@ export const imageManifest = {
   },
   "logo": {
     "src": "/site/logo.webp",
-    "width": 500,
-    "height": 100
+    "width": 743,
+    "height": 135
   },
   "logo-branco": {
     "src": "/site/logo-branco.webp",
@@ -166,8 +166,8 @@ export const imageManifest = {
   },
   "hero": {
     "src": "/site/hero.webp",
-    "width": 1400,
-    "height": 500
+    "width": 1600,
+    "height": 572
   },
   "hero-2": {
     "src": "/site/hero-2.webp",

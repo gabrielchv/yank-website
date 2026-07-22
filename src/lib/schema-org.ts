@@ -1,5 +1,4 @@
 import { SITE_URL, empresa } from '@/content/empresa'
-import { precoVisivel } from '@/content/produtos'
 import type { Artigo, Categoria, Faq, Produto } from '@/content/schema'
 import { urlAbsoluta } from './seo'
 
@@ -45,6 +44,7 @@ export function schemaOrganizacao(): Json {
         alternateName: empresa.nomeAnterior,
         url: SITE_URL,
         description: empresa.descricaoCurta,
+        foundingDate: String(empresa.fundadaEm),
         logo: {
           '@type': 'ImageObject',
           '@id': `${SITE_URL}/#logo`,
@@ -112,21 +112,20 @@ export function schemaFaq(perguntas: Faq[]): Json | null {
 }
 
 export function schemaProduto(p: Produto, caminho: string): Json {
-  const preco = precoVisivel(p)
-
   /*
-    Sem preço público conferido, a Offer vai sem `price`. Inventar valor aqui
-    gera ação manual do Google — e o portão em scripts/check-data.ts existe
-    justamente para que isso nunca chegue a produção.
+    Venda sob orçamento: nenhum preço é publicado no site, e portanto nenhum
+    entra aqui. A Offer permanece porque carrega disponibilidade, vendedor e
+    URL — informação verdadeira e útil ao Google. `priceSpecification` fica de
+    fora de propósito: declarar preço 0 ou faixa inventada gera ação manual, e
+    num equipamento de segurança dado inventado é problema além do SEO.
   */
   const oferta: Json = {
     '@type': 'Offer',
-    priceCurrency: 'BRL',
     availability: 'https://schema.org/InStock',
     itemCondition: 'https://schema.org/NewCondition',
     url: urlAbsoluta(caminho),
     seller: { '@id': ID_ORG },
-    ...(preco !== undefined ? { price: preco } : {}),
+    businessFunction: 'http://purl.org/goodrelations/v1#Sell',
   }
 
   return {

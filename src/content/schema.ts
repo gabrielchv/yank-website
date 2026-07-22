@@ -3,19 +3,26 @@ import { z } from 'zod'
 /**
  * Esquema dos dados do catálogo.
  *
- * Regra central: TODO campo numérico é opcional. Vazão, dimensões, peso e preço
- * só existem quando forem dados reais e conferidos. Enquanto forem provisórios,
- * o produto fica com `dataStatus: 'draft'` e o build de produção falha
- * (ver scripts/check-data.ts) — impedindo publicar número inventado dentro do
- * schema Product, que é problema de SEO e, num equipamento de segurança,
- * problema de verdade.
+ * Regra central: só entra aqui dado conferido. Vazão, dimensões e peso são
+ * opcionais e só existem quando vierem do catálogo do fabricante. Enquanto
+ * forem provisórios, o produto fica com `dataStatus: 'draft'` e o build de
+ * produção falha (ver scripts/check-data.ts) — impedindo publicar número
+ * inventado dentro do schema Product, que é problema de SEO e, num equipamento
+ * de segurança, problema de verdade.
+ *
+ * Preço não existe no esquema, por decisão de negócio: a Yank EPC trabalha com
+ * orçamento sob consulta, e nenhum valor é publicado no site nem no JSON-LD.
  */
 
 export const especificacaoSchema = z.object({
   label: z.string(),
   valor: z.string(),
-  /** true = valor provisório, some do site e do JSON-LD até ser conferido */
-  provisorio: z.boolean().default(false),
+  /**
+   * true = valor ainda não conferido no catálogo do fabricante. Segura o
+   * produto em 'draft' e bloqueia o build de produção. Omitir equivale a
+   * declarar o valor conferido — que é o estado de todas as linhas hoje.
+   */
+  provisorio: z.boolean().optional(),
 })
 
 export const faqSchema = z.object({
@@ -70,10 +77,8 @@ export const produtoSchema = z.object({
   /** slugs de artigos do blog relacionados */
   artigos: z.array(z.string()).default([]),
 
-  preco: z.number().positive().optional(),
-
   /**
-   * 'draft'    — contém valor provisório (especificações e/ou preço)
+   * 'draft'    — contém especificação provisória
    * 'verified' — todo dado exibido foi conferido contra o catálogo real
    */
   dataStatus: z.enum(['draft', 'verified']),

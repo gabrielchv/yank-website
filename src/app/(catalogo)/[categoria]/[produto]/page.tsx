@@ -13,13 +13,7 @@ import { Trilha } from '@/components/Trilha'
 import { artigosPorSlugs } from '@/content/blog'
 import { getCategoria } from '@/content/categorias'
 import { imageManifest } from '@/content/image-manifest'
-import {
-  especificacoesVisiveis,
-  getProduto,
-  getRelacionados,
-  precoParaExibicao,
-  produtos,
-} from '@/content/produtos'
+import { especificacoesVisiveis, getProduto, getRelacionados, produtos } from '@/content/produtos'
 import { schemaFaq, schemaProduto, schemaTrilha, type ItemTrilha } from '@/lib/schema-org'
 import { construirMetadata } from '@/lib/seo'
 
@@ -64,7 +58,6 @@ export default async function PaginaProduto({ params }: Props) {
   const caminho = `/${p.categoria}/${p.slug}/`
   const img = imageManifest[p.imagens[0].chave as keyof typeof imageManifest]
   const specs = especificacoesVisiveis(p)
-  const preco = precoParaExibicao(p)
   const relacionados = getRelacionados(p)
   const artigos = artigosPorSlugs(p.artigos)
 
@@ -123,22 +116,19 @@ export default async function PaginaProduto({ params }: Props) {
             ))}
           </ul>
 
-          {preco && (
-            <div className="mt-7 rounded-xl border border-marca-100 bg-marca-50/60 px-5 py-4">
-              <p className="text-sm text-tinta-500">A partir de</p>
-              <p className="mt-1 flex items-baseline gap-2 text-3xl font-bold text-tinta-900">
-                {preco.valor.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}
-                {preco.provisorio && (
-                  <span className="rounded bg-alerta-500/10 px-1.5 py-0.5 text-xs font-semibold text-alerta-600">
-                    provisório
-                  </span>
-                )}
-              </p>
-              <p className="mt-1 text-sm text-tinta-500">
-                Valor sob consulta conforme material, bitola e configuração.
-              </p>
-            </div>
-          )}
+          {/*
+            Sem preço no site, por decisão de negócio: o valor depende de
+            material, bitola e configuração. O bloco abaixo diz isso de forma
+            explícita, em vez de deixar a pessoa procurando um preço que não
+            existe — e emenda direto no pedido de orçamento.
+          */}
+          <div className="mt-7 rounded-xl border border-marca-100 bg-marca-50/60 px-5 py-4">
+            <p className="text-lg font-semibold text-tinta-900">Orçamento sob consulta</p>
+            <p className="mt-1 text-sm text-tinta-500">
+              O valor varia conforme material, bitola, acionamento e quantidade. Informe essas
+              condições e respondemos com a proposta.
+            </p>
+          </div>
 
           <div className="mt-7 flex flex-col gap-3 sm:flex-row">
             <BotaoWhatsApp contexto={p.codigo} />

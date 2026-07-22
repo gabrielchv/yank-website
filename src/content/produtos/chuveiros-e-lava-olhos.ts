@@ -16,16 +16,15 @@ const CATEGORIA = 'chuveiros-e-lava-olhos-de-emergencia'
 const ARTIGOS = ['aco-inox-pvc-ou-galvanizado', 'acionamento-manual-ou-automatico']
 
 /**
- * ⚠️ ESPECIFICAÇÕES E PREÇOS SÃO PROVISÓRIOS (`provisorio: true`, dataStatus 'draft').
+ * Fonte dos dados: `source-files/catalogo.md` (catálogo do fabricante).
  *
- * Os valores abaixo existem para o layout ser desenhado contra conteúdo realista.
- * Eles NÃO aparecem no site nem no JSON-LD enquanto o produto estiver como
- * 'draft', e o build de produção falha até serem conferidos.
+ * Só entra aqui o que o catálogo declara: material, bitola, crivos/bacia e tipo
+ * de acionamento. Vazão, pressão, altura, dimensões e peso NÃO constam do
+ * catálogo e por isso não são publicados — número inventado em equipamento de
+ * segurança é problema além do SEO. Se o fabricante fornecer a ficha técnica
+ * com esses valores, acrescente-os aqui e nada mais precisa mudar.
  *
- * Para publicar um produto: substitua os valores pelos reais do catálogo,
- * remova `provisorio: true` de cada linha e mude `dataStatus` para 'verified'.
- *
- * Já os campos `bullets` são REAIS — vieram do site atual e podem ser confiados.
+ * Preço não existe neste esquema: a venda é sob orçamento.
  */
 
 export const chuveirosELavaOlhos: Produto[] = [
@@ -55,16 +54,10 @@ export const chuveirosELavaOlhos: Produto[] = [
       'Sinaleira luminosa',
     ],
     especificacoes: [
-      { label: 'Material da estrutura', valor: 'Aço inox AISI 304', provisorio: false },
-      { label: 'Bitola de alimentação', valor: '3/4" ou 1"', provisorio: false },
-      { label: 'Crivos e bacia', valor: 'Aço inox', provisorio: false },
-      { label: 'Acionamento', valor: 'Manual, por alça puxe', provisorio: false },
-      { label: 'Vazão do chuveiro', valor: '76 L/min', provisorio: true },
-      { label: 'Vazão do lava-olhos', valor: '12 L/min', provisorio: true },
-      { label: 'Pressão de trabalho', valor: '2,1 a 4,0 bar', provisorio: true },
-      { label: 'Altura do crivo', valor: '2.100 mm', provisorio: true },
-      { label: 'Dimensões (L × P × A)', valor: '600 × 700 × 2.300 mm', provisorio: true },
-      { label: 'Peso aproximado', valor: '32 kg', provisorio: true },
+      { label: 'Material da estrutura', valor: 'Aço inox AISI 304' },
+      { label: 'Bitola de alimentação', valor: '3/4" ou 1"' },
+      { label: 'Crivos e bacia', valor: 'Aço inox' },
+      { label: 'Acionamento', valor: 'Manual, por alça puxe' },
     ],
     aplicacoes: aplicacoesIndustriais,
     conformidade: conformidadeBase,
@@ -88,8 +81,7 @@ export const chuveirosELavaOlhos: Produto[] = [
     ],
     relacionados: ['clm-e-ai-aco-inox-304', 'clm-e-ct-cortina-de-protecao', 'cla-acionamento-automatico'],
     artigos: ARTIGOS,
-    preco: 4890,
-    dataStatus: 'draft',
+    dataStatus: 'verified',
     ordem: 1,
   },
 
@@ -101,7 +93,7 @@ export const chuveirosELavaOlhos: Produto[] = [
     h1: 'Chuveiro e Lava-Olhos de Emergência em Aço Inox AISI 304 — Modelo CLM-E AI',
     titleSeo: 'Chuveiro e Lava-Olhos de Emergência Inox CLM-E AI | Yank',
     metaDescription:
-      'Chuveiro com lava-olhos acoplado 100% em aço inox AISI 304, bitola 3/4" ou 1". Acionamento manual conforme a ABNT NBR 16291. Fabricante há 30 anos.',
+      'Chuveiro com lava-olhos acoplado 100% em aço inox AISI 304, bitola 3/4" ou 1". Acionamento manual conforme a ABNT NBR 16291. Fabricante desde 1995.',
     resumo:
       'O modelo mais vendido da linha: coluna conjugada 100% em aço inox AISI 304, que protege corpo e olhos a partir de um único ponto de emergência.',
     descricao: [
@@ -117,16 +109,10 @@ export const chuveirosELavaOlhos: Produto[] = [
       'Placa de sinalização',
     ],
     especificacoes: [
-      { label: 'Material da estrutura', valor: 'Aço inox AISI 304', provisorio: false },
-      { label: 'Bitola de alimentação', valor: '3/4" ou 1"', provisorio: false },
-      { label: 'Crivos e bacia', valor: 'Aço inox', provisorio: false },
-      { label: 'Acionamento', valor: 'Manual, por alça puxe', provisorio: false },
-      { label: 'Vazão do chuveiro', valor: '76 L/min', provisorio: true },
-      { label: 'Vazão do lava-olhos', valor: '12 L/min', provisorio: true },
-      { label: 'Pressão de trabalho', valor: '2,1 a 4,0 bar', provisorio: true },
-      { label: 'Altura do crivo', valor: '2.100 mm', provisorio: true },
-      { label: 'Dimensões (L × P × A)', valor: '600 × 700 × 2.300 mm', provisorio: true },
-      { label: 'Peso aproximado', valor: '28 kg', provisorio: true },
+      { label: 'Material da estrutura', valor: 'Aço inox AISI 304' },
+      { label: 'Bitola de alimentação', valor: '3/4" ou 1"' },
+      { label: 'Crivos e bacia', valor: 'Aço inox' },
+      { label: 'Acionamento', valor: 'Manual, por alça puxe' },
     ],
     aplicacoes: aplicacoesIndustriais,
     conformidade: conformidadeBase,
@@ -150,8 +136,7 @@ export const chuveirosELavaOlhos: Produto[] = [
     ],
     relacionados: ['clm-e-ai-sd-aco-inox-com-ducha', 'clm-e-pvc', 'clm-e-ag-aco-galvanizado'],
     artigos: ARTIGOS,
-    preco: 4190,
-    dataStatus: 'draft',
+    dataStatus: 'verified',
     ordem: 2,
   },
 
@@ -180,16 +165,11 @@ export const chuveirosELavaOlhos: Produto[] = [
       'Placa de sinalização',
     ],
     especificacoes: [
-      { label: 'Material da estrutura', valor: 'PVC', provisorio: false },
-      { label: 'Bitola de alimentação', valor: '1"', provisorio: false },
-      { label: 'Crivos e bacia', valor: 'Aço inox', provisorio: false },
-      { label: 'Acabamento', valor: 'Verde', provisorio: false },
-      { label: 'Acionamento', valor: 'Manual, por alça puxe', provisorio: false },
-      { label: 'Vazão do chuveiro', valor: '76 L/min', provisorio: true },
-      { label: 'Vazão do lava-olhos', valor: '12 L/min', provisorio: true },
-      { label: 'Pressão de trabalho', valor: '2,1 a 4,0 bar', provisorio: true },
-      { label: 'Altura do crivo', valor: '2.100 mm', provisorio: true },
-      { label: 'Peso aproximado', valor: '19 kg', provisorio: true },
+      { label: 'Material da estrutura', valor: 'PVC' },
+      { label: 'Bitola de alimentação', valor: '1"' },
+      { label: 'Crivos e bacia', valor: 'Aço inox' },
+      { label: 'Acabamento', valor: 'Verde' },
+      { label: 'Acionamento', valor: 'Manual, por alça puxe' },
     ],
     aplicacoes: aplicacoesCorrosivas,
     conformidade: conformidadeBase,
@@ -213,8 +193,7 @@ export const chuveirosELavaOlhos: Produto[] = [
     ],
     relacionados: ['clm-e-ai-aco-inox-304', 'lm-pvc', 'clm-e-ag-aco-galvanizado'],
     artigos: ARTIGOS,
-    preco: 3690,
-    dataStatus: 'draft',
+    dataStatus: 'verified',
     ordem: 3,
   },
 
@@ -226,12 +205,12 @@ export const chuveirosELavaOlhos: Produto[] = [
     h1: 'Chuveiro e Lava-Olhos de Emergência em Aço Galvanizado — Modelo CLM-E AG',
     titleSeo: 'Chuveiro Lava-Olhos Aço Galvanizado CLM-E AG | Yank EPC',
     metaDescription:
-      'Chuveiro com lava-olhos acoplado em aço galvanizado com pintura epóxi verde, bitola 3/4" ou 1". Crivos e bacia em inox, conforme a NBR 16291.',
+      'Chuveiro com lava-olhos acoplado em aço galvanizado com pintura verde, bitola 3/4" ou 1". Crivos e bacia em inox, conforme a NBR 16291.',
     resumo:
-      'Conjugado em aço galvanizado com pintura epóxi: a opção de melhor custo para ambientes internos e de agressividade moderada.',
+      'Conjugado em aço galvanizado com pintura: a opção de melhor custo para ambientes internos e de agressividade moderada.',
     descricao: [
-      'O CLM-E AG entrega a mesma função do conjugado em inox — chuveiro e lava-olhos na mesma coluna, cobrindo os dois cenários de acidente — em aço galvanizado com pintura epóxi verde. É a especificação de melhor relação custo-benefício para áreas internas, oficinas, almoxarifados de produto químico e setores onde a exposição corrosiva é moderada.',
-      'A galvanização protege o aço por barreira e por ação galvânica; a pintura epóxi verde acrescenta uma segunda camada e cumpre o papel de sinalização visual, já que o verde é a cor convencionada para equipamento de emergência. Crivos e bacia são mantidos em aço inox, preservando as superfícies de contato com o usuário e a seção de saída de água.',
+      'O CLM-E AG entrega a mesma função do conjugado em inox — chuveiro e lava-olhos na mesma coluna, cobrindo os dois cenários de acidente — em aço galvanizado com pintura verde. É a especificação de melhor relação custo-benefício para áreas internas, oficinas, almoxarifados de produto químico e setores onde a exposição corrosiva é moderada.',
+      'A galvanização protege o aço por barreira e por ação galvânica; a pintura verde acrescenta uma segunda camada e cumpre o papel de sinalização visual, já que o verde é a cor convencionada para equipamento de emergência. Crivos e bacia são mantidos em aço inox, preservando as superfícies de contato com o usuário e a seção de saída de água.',
       'A alimentação pode ser em 3/4" ou 1", conforme a rede disponível, e o acionamento é manual pela alça puxe, em um único movimento, com válvula que permanece aberta até o fechamento deliberado.',
       'O ponto de atenção é a manutenção da pintura. Diferente do inox, o galvanizado pintado depende da integridade da camada para resistir: riscos, batidas e desgaste precisam de retoque, sob pena de a corrosão avançar a partir do ponto exposto. Em ambiente agressivo ou de difícil manutenção, o CLM-E AI em inox costuma sair mais barato ao longo da vida útil.',
     ],
@@ -243,15 +222,11 @@ export const chuveirosELavaOlhos: Produto[] = [
       'Placa de sinalização',
     ],
     especificacoes: [
-      { label: 'Material da estrutura', valor: 'Aço galvanizado com pintura epóxi', provisorio: false },
-      { label: 'Bitola de alimentação', valor: '3/4" ou 1"', provisorio: false },
-      { label: 'Crivos e bacia', valor: 'Aço inox', provisorio: false },
-      { label: 'Acabamento', valor: 'Pintura verde', provisorio: false },
-      { label: 'Acionamento', valor: 'Manual, por alça puxe', provisorio: false },
-      { label: 'Vazão do chuveiro', valor: '76 L/min', provisorio: true },
-      { label: 'Vazão do lava-olhos', valor: '12 L/min', provisorio: true },
-      { label: 'Altura do crivo', valor: '2.100 mm', provisorio: true },
-      { label: 'Peso aproximado', valor: '26 kg', provisorio: true },
+      { label: 'Material da estrutura', valor: 'Aço galvanizado com pintura verde' },
+      { label: 'Bitola de alimentação', valor: '3/4" ou 1"' },
+      { label: 'Crivos e bacia', valor: 'Aço inox' },
+      { label: 'Acabamento', valor: 'Pintura verde' },
+      { label: 'Acionamento', valor: 'Manual, por alça puxe' },
     ],
     aplicacoes: [
       'Oficinas e áreas de manutenção',
@@ -281,8 +256,7 @@ export const chuveirosELavaOlhos: Produto[] = [
     ],
     relacionados: ['clm-e-ai-aco-inox-304', 'clm-e-pvc', 'clm-e-ct-cortina-de-protecao'],
     artigos: ARTIGOS,
-    preco: 3290,
-    dataStatus: 'draft',
+    dataStatus: 'verified',
     ordem: 4,
   },
 
@@ -300,7 +274,7 @@ export const chuveirosELavaOlhos: Produto[] = [
     descricao: [
       'A norma exige que a roupa contaminada seja removida durante o banho de emergência — sem isso, o produto químico retido no tecido continua em contato com a pele e a lavagem não resolve. Na prática, porém, essa etapa é a que mais encontra resistência: em área de circulação, com colegas por perto, a pessoa hesita em se despir, e a hesitação custa exatamente os segundos que importam.',
       'O CLM-E CT resolve isso com uma cortina de proteção que envolve a área do banho. Ela cria o mínimo de privacidade necessário para que a vítima remova a roupa sem hesitar, e ao mesmo tempo contém o respingo da água contaminada, limitando a área afetada e facilitando a limpeza posterior — relevante quando o efluente do banho precisa de destinação controlada.',
-      'A estrutura pode ser fornecida em aço galvanizado com pintura epóxi verde ou em aço inox, conforme a agressividade do ambiente, com alimentação em 3/4" ou 1". Crivos e bacia são em aço inox e o acionamento é manual, em um único movimento.',
+      'A estrutura pode ser fornecida em aço galvanizado com pintura verde ou em aço inox, conforme a agressividade do ambiente, com alimentação em 3/4" ou 1". Crivos e bacia são em aço inox e o acionamento é manual, em um único movimento.',
       'É a especificação indicada em áreas de circulação, corredores entre setores, plantas com equipe mista e operações em que o efluente do banho precisa ser contido. Em sala fechada ou área restrita, o ganho da cortina é menor e o CLM-E AI costuma bastar.',
     ],
     bullets: [
@@ -312,16 +286,12 @@ export const chuveirosELavaOlhos: Produto[] = [
       'Cortina de proteção',
     ],
     especificacoes: [
-      { label: 'Material da estrutura', valor: 'Aço galvanizado ou aço inox', provisorio: false },
-      { label: 'Bitola de alimentação', valor: '3/4" ou 1"', provisorio: false },
-      { label: 'Crivos e bacia', valor: 'Aço inox', provisorio: false },
-      { label: 'Acabamento', valor: 'Pintura verde', provisorio: false },
-      { label: 'Acionamento', valor: 'Manual, por alça puxe', provisorio: false },
-      { label: 'Cortina', valor: 'Cortina de proteção envolvente', provisorio: false },
-      { label: 'Vazão do chuveiro', valor: '76 L/min', provisorio: true },
-      { label: 'Vazão do lava-olhos', valor: '12 L/min', provisorio: true },
-      { label: 'Diâmetro da cortina', valor: '1.100 mm', provisorio: true },
-      { label: 'Peso aproximado', valor: '38 kg', provisorio: true },
+      { label: 'Material da estrutura', valor: 'Aço galvanizado ou aço inox' },
+      { label: 'Bitola de alimentação', valor: '3/4" ou 1"' },
+      { label: 'Crivos e bacia', valor: 'Aço inox' },
+      { label: 'Acabamento', valor: 'Pintura verde' },
+      { label: 'Acionamento', valor: 'Manual, por alça puxe' },
+      { label: 'Cortina', valor: 'Cortina de proteção envolvente' },
     ],
     aplicacoes: [
       'Áreas de circulação e corredores entre setores',
@@ -351,8 +321,7 @@ export const chuveirosELavaOlhos: Produto[] = [
     ],
     relacionados: ['clm-e-ai-aco-inox-304', 'clm-e-ag-aco-galvanizado', 'clm-e-ai-sd-aco-inox-com-ducha'],
     artigos: ARTIGOS,
-    preco: 5290,
-    dataStatus: 'draft',
+    dataStatus: 'verified',
     ordem: 5,
   },
 
@@ -370,7 +339,7 @@ export const chuveirosELavaOlhos: Produto[] = [
     descricao: [
       'Em um acidente com projeção química nos olhos, a vítima perde justamente o sentido de que precisaria para encontrar a alavanca do equipamento. Essa é a limitação real do acionamento manual, e é o que o CLA elimina: basta pisar na plataforma para a água ser liberada. Nenhuma etapa de busca, nenhuma alavanca a localizar.',
       'O diferencial do CLA em relação ao CLESP está nas plataformas independentes. Chuveiro e lava-olhos têm cada um a sua plataforma, o que permite acionar apenas o necessário — só a lavagem ocular, sem o banho completo, ou o contrário. Além de evitar o desperdício de água e o encharcamento desnecessário, isso importa quando o produto químico está restrito ao rosto e o banho de corpo inteiro espalharia a contaminação.',
-      'A estrutura é fornecida em aço galvanizado com pintura epóxi verde ou em aço inox, conforme a agressividade do ambiente, com alimentação em 1" — bitola maior, adequada ao volume simultâneo que o equipamento pode demandar. Crivos e bacia são em aço inox.',
+      'A estrutura é fornecida em aço galvanizado com pintura verde ou em aço inox, conforme a agressividade do ambiente, com alimentação em 1" — bitola maior, adequada ao volume simultâneo que o equipamento pode demandar. Crivos e bacia são em aço inox.',
       'É a especificação usual em áreas de risco químico elevado: manuseio de ácidos concentrados, bases fortes e produtos com ação imediata sobre a córnea. Nesses pontos, a diferença de poucos segundos entre localizar um comando e simplesmente pisar define a extensão da lesão.',
     ],
     bullets: [
@@ -382,16 +351,11 @@ export const chuveirosELavaOlhos: Produto[] = [
       'Acionamento automático por plataformas independentes',
     ],
     especificacoes: [
-      { label: 'Material da estrutura', valor: 'Aço galvanizado ou aço inox', provisorio: false },
-      { label: 'Bitola de alimentação', valor: '1"', provisorio: false },
-      { label: 'Crivos e bacia', valor: 'Aço inox', provisorio: false },
-      { label: 'Acabamento', valor: 'Pintura verde', provisorio: false },
-      { label: 'Acionamento', valor: 'Automático, por plataformas independentes', provisorio: false },
-      { label: 'Vazão do chuveiro', valor: '76 L/min', provisorio: true },
-      { label: 'Vazão do lava-olhos', valor: '12 L/min', provisorio: true },
-      { label: 'Pressão de trabalho', valor: '2,1 a 4,0 bar', provisorio: true },
-      { label: 'Dimensões da plataforma', valor: '600 × 600 mm', provisorio: true },
-      { label: 'Peso aproximado', valor: '41 kg', provisorio: true },
+      { label: 'Material da estrutura', valor: 'Aço galvanizado ou aço inox' },
+      { label: 'Bitola de alimentação', valor: '1"' },
+      { label: 'Crivos e bacia', valor: 'Aço inox' },
+      { label: 'Acabamento', valor: 'Pintura verde' },
+      { label: 'Acionamento', valor: 'Automático, por plataformas independentes' },
     ],
     aplicacoes: [
       'Manuseio de ácidos concentrados e bases fortes',
@@ -416,13 +380,12 @@ export const chuveirosELavaOlhos: Produto[] = [
     imagens: [
       {
         chave: 'cla',
-        alt: 'Chuveiro e lava-olhos de emergência automático CLA com plataformas de acionamento independentes no piso, crivo superior e bacia de lava-olhos',
+        alt: 'Chuveiro e lava-olhos de emergência automático CLA com duas plataformas de grelha independentes no piso, coluna do chuveiro com crivo e placa de sinalização e bacia de lava-olhos em coluna própria',
       },
     ],
     relacionados: ['clesp-plataforma-unica', 'clm-e-ai-aco-inox-304', 'la-lava-olhos-automatico'],
     artigos: ARTIGOS,
-    preco: 5890,
-    dataStatus: 'draft',
+    dataStatus: 'verified',
     ordem: 6,
   },
 
@@ -441,7 +404,7 @@ export const chuveirosELavaOlhos: Produto[] = [
       'O CLESP é a versão automática de acionamento conjunto. Uma única plataforma no piso dispara chuveiro e lava-olhos simultaneamente, e a alça puxe permanece disponível como comando alternativo. Essa redundância é o ponto forte do modelo: se a vítima não conseguir se posicionar sobre a plataforma, ainda tem a alça; se não conseguir localizar a alça, basta pisar.',
       'Comparado ao CLA, a instalação é mais simples — há uma plataforma em vez de duas — e o acionamento conjunto elimina a decisão de qual comando usar, que em situação de pânico é um obstáculo real. Em contrapartida, não permite acionar apenas a lavagem ocular: o banho vem junto.',
       'Essa característica define a escolha entre os dois. Onde o cenário mais provável envolve contaminação ampla, de corpo e rosto ao mesmo tempo, o acionamento conjunto do CLESP é vantagem. Onde a contaminação tende a ser localizada nos olhos, as plataformas independentes do CLA evitam encharcar e espalhar o produto desnecessariamente.',
-      'A estrutura é fornecida em aço galvanizado com pintura epóxi verde ou em aço inox, com alimentação em 1", crivos e bacia em aço inox e placa de sinalização.',
+      'A estrutura é fornecida em aço galvanizado com pintura verde ou em aço inox, com alimentação em 1", crivos e bacia em aço inox e placa de sinalização.',
     ],
     bullets: [
       'Aço galvanizado ou inox',
@@ -452,15 +415,11 @@ export const chuveirosELavaOlhos: Produto[] = [
       'Acionamento automático por plataforma única e alça puxe',
     ],
     especificacoes: [
-      { label: 'Material da estrutura', valor: 'Aço galvanizado ou aço inox', provisorio: false },
-      { label: 'Bitola de alimentação', valor: '1"', provisorio: false },
-      { label: 'Crivos e bacia', valor: 'Aço inox', provisorio: false },
-      { label: 'Acabamento', valor: 'Pintura verde', provisorio: false },
-      { label: 'Acionamento', valor: 'Automático por plataforma única, com alça puxe', provisorio: false },
-      { label: 'Vazão do chuveiro', valor: '76 L/min', provisorio: true },
-      { label: 'Vazão do lava-olhos', valor: '12 L/min', provisorio: true },
-      { label: 'Dimensões da plataforma', valor: '700 × 700 mm', provisorio: true },
-      { label: 'Peso aproximado', valor: '37 kg', provisorio: true },
+      { label: 'Material da estrutura', valor: 'Aço galvanizado ou aço inox' },
+      { label: 'Bitola de alimentação', valor: '1"' },
+      { label: 'Crivos e bacia', valor: 'Aço inox' },
+      { label: 'Acabamento', valor: 'Pintura verde' },
+      { label: 'Acionamento', valor: 'Automático por plataforma única, com alça puxe' },
     ],
     aplicacoes: [
       'Áreas com risco de contaminação ampla do corpo',
@@ -485,13 +444,12 @@ export const chuveirosELavaOlhos: Produto[] = [
     imagens: [
       {
         chave: 'clesp',
-        alt: 'Chuveiro e lava-olhos de emergência automático CLESP com plataforma única de acionamento no piso e alça puxe, crivo superior e bacia de lava-olhos',
+        alt: 'Chuveiro e lava-olhos de emergência automático CLESP sobre plataforma única de grelha verde, com crivo superior, anel de acionamento na coluna, placa de sinalização e bacia de lava-olhos em coluna própria',
       },
     ],
     relacionados: ['cla-acionamento-automatico', 'clm-e-ai-aco-inox-304', 'ca-acionamento-automatico'],
     artigos: ARTIGOS,
-    preco: 5490,
-    dataStatus: 'draft',
+    dataStatus: 'verified',
     ordem: 7,
   },
 ]

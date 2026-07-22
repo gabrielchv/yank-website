@@ -6,8 +6,14 @@
  * do mesmo parágrafo divergirem com o tempo — e mantém a redação consistente,
  * que é o que o Google lê como sinal de qualidade.
  *
- * Nada aqui é provisório: é conhecimento de domínio (NBR 16291, materiais,
- * setores de aplicação), não número inventado de catálogo.
+ * Nada aqui é número de catálogo: é conhecimento de domínio.
+ *
+ * ⚠️ Ao mexer nas afirmações normativas, cuidado com três confusões comuns
+ * entre NBR 16291:2014 e ANSI/ISEA Z358.1-2014 (R2020) — a NBR derivou da
+ * edição 2009 da ANSI e não acompanhou as mudanças de 2014:
+ *   - a faixa de água morna 16–38 °C é da ANSI; a NBR pede temperatura ambiente
+ *   - a metragem (~17 m / 55 ft) é da ANSI; a NBR fixa só os 10 segundos
+ *   - altura dos bocais do lava-olhos: 85–115 cm na NBR, 83,8–134,6 cm na ANSI
  */
 
 import type { Faq } from './schema'
@@ -50,10 +56,10 @@ export const aplicacoesCampo = [
 // -------------------------------------------------------------- conformidade
 
 export const conformidadeBase = [
-  'Fabricado conforme os requisitos da ABNT NBR 16291:2014 — Chuveiros e lava-olhos de emergência',
-  'Referência à ANSI/ISEA Z358.1 para os parâmetros de acionamento e alcance de jato',
-  'Produzido sob sistema de qualidade certificado pela SGS e alinhado à ISO 9001',
-  'Sinalização conforme a NR-26 e identificação visual do ponto de emergência',
+  'Fabricado conforme os requisitos da ABNT NBR 16291:2014 — Chuveiros e lava-olhos de emergência: requisitos gerais',
+  'Referência à ANSI/ISEA Z358.1-2014 (R2020), norma que deu origem à NBR 16291',
+  'Fabricação própria, com controle de qualidade em todas as etapas de produção',
+  'Sinalização em verde conforme a NR-26 e a ABNT NBR 7195, que atribui à cor o significado de segurança',
 ]
 
 export const conformidadeAcionamento = [
@@ -99,7 +105,7 @@ export const faqGerais: Faq[] = [
   {
     pergunta: 'Como solicitar um orçamento?',
     resposta:
-      'Pelo WhatsApp, no botão de orçamento desta página — a mensagem já vai com o modelo preenchido. Também é possível falar pelo telefone (11) 9.1300-6556 ou por e-mail em yank@yank.com.br.',
+      'Pelo WhatsApp, no botão de orçamento desta página — a mensagem já vai com o modelo preenchido. Também é possível falar pelo telefone (11) 91300-6556 ou por e-mail em yank@yank.com.br.',
   },
 ]
 
@@ -124,5 +130,5 @@ export const faqTransportavel: Faq = {
 export const faqInstalacao: Faq = {
   pergunta: 'Onde o equipamento deve ser instalado?',
   resposta:
-    'Em local desobstruído, no mesmo nível da área de risco e a uma distância percorrível em até 10 segundos — na prática, cerca de 20 metros. O trajeto não pode ter degraus, portas com trava ou desvios, e o ponto precisa estar sinalizado e com iluminação adequada.',
+    'Em local desobstruído, no mesmo nível da área de risco e a uma distância percorrível em até 10 segundos. O trajeto não pode ter degraus, portas com trava ou desvios, e o ponto precisa estar sinalizado e com iluminação adequada. A referência é o tempo: a ABNT NBR 16291 não fixa metragem, e a ANSI/ISEA Z358.1 cita cerca de 17 metros apenas como equivalência aproximada.',
 }

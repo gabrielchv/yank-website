@@ -10,7 +10,7 @@
     "lint": "eslint",
     "typecheck": "tsc --noEmit",
     "check:data": "tsx scripts/check-data.ts",
-    "images": "tsx scripts/fetch-images.ts"
+    "images": "tsx scripts/build-images.ts"
   },
   "dependencies": {
     "next": "16.2.11",

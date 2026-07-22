@@ -14,7 +14,7 @@ import {
 const CATEGORIA = 'chuveiros-de-emergencia'
 const ARTIGOS = ['acionamento-manual-ou-automatico', 'aco-inox-pvc-ou-galvanizado']
 
-/** ⚠️ Especificações marcadas `provisorio: true` e `preco` são MOCK — ver produtos/chuveiros-e-lava-olhos.ts */
+/** Dados conforme `source-files/catalogo.md`. Sem vazão/pressão/peso: o catálogo não os declara. */
 
 export const chuveiros: Produto[] = [
   {
@@ -30,7 +30,7 @@ export const chuveiros: Produto[] = [
       'Chuveiro de emergência isolado com acionamento manual por alça, indicado onde o risco predominante é o contato do produto químico com o corpo.',
     descricao: [
       'O CM é o chuveiro de emergência isolado da linha Yank EPC, para áreas em que o risco predominante é o respingo ou derramamento sobre o corpo e a roupa — e não a projeção nos olhos. Docas de descarga, áreas de transferência de produto e corredores de circulação entre setores são os pontos típicos: instalar ali a coluna conjugada seria superdimensionar, enquanto o chuveiro simples cobre o cenário real com custo e manutenção menores.',
-      'A coluna é fornecida em aço galvanizado com pintura epóxi verde ou em aço inox, conforme a agressividade do ambiente, com fixação no chão e alimentação em 3/4" ou 1". O crivo é em aço inox e dimensionado para produzir um jato amplo e de baixa energia: a função é remover o contaminante da pele, e um jato concentrado demais espalha o produto em vez de eliminá-lo.',
+      'A coluna é fornecida em aço galvanizado com pintura verde ou em aço inox, conforme a agressividade do ambiente, com fixação no chão e alimentação em 3/4" ou 1". O crivo é em aço inox e dimensionado para produzir um jato amplo e de baixa energia: a função é remover o contaminante da pele, e um jato concentrado demais espalha o produto em vez de eliminá-lo.',
       'O acionamento é manual, por alça, em um único movimento. A válvula permanece aberta até o fechamento deliberado — exigência da ABNT NBR 16291:2014 que existe para liberar as mãos do usuário, que precisa remover a roupa contaminada durante o banho.',
       'Vale lembrar que a norma exige o equipamento a no máximo 10 segundos de caminhada do ponto de risco, no mesmo nível e com trajeto desobstruído. Um chuveiro corretamente especificado, mas posicionado atrás de uma porta ou de um pallet, não cumpre a função.',
     ],
@@ -43,16 +43,12 @@ export const chuveiros: Produto[] = [
       'Fixação no chão',
     ],
     especificacoes: [
-      { label: 'Material da estrutura', valor: 'Aço galvanizado ou aço inox', provisorio: false },
-      { label: 'Bitola de alimentação', valor: '3/4" ou 1"', provisorio: false },
-      { label: 'Crivo', valor: 'Aço inox', provisorio: false },
-      { label: 'Acabamento', valor: 'Pintura verde', provisorio: false },
-      { label: 'Acionamento', valor: 'Manual, por alça puxe', provisorio: false },
-      { label: 'Fixação', valor: 'No chão', provisorio: false },
-      { label: 'Vazão', valor: '76 L/min', provisorio: true },
-      { label: 'Pressão de trabalho', valor: '2,1 a 4,0 bar', provisorio: true },
-      { label: 'Altura do crivo', valor: '2.100 mm', provisorio: true },
-      { label: 'Peso aproximado', valor: '18 kg', provisorio: true },
+      { label: 'Material da estrutura', valor: 'Aço galvanizado ou aço inox' },
+      { label: 'Bitola de alimentação', valor: '3/4" ou 1"' },
+      { label: 'Crivo', valor: 'Aço inox' },
+      { label: 'Acabamento', valor: 'Pintura verde' },
+      { label: 'Acionamento', valor: 'Manual, por alça puxe' },
+      { label: 'Fixação', valor: 'No chão' },
     ],
     aplicacoes: [
       'Docas de carga e descarga de produto químico',
@@ -82,8 +78,7 @@ export const chuveiros: Produto[] = [
     ],
     relacionados: ['ca-acionamento-automatico', 'clm-e-ai-aco-inox-304', 'cm-ua-chuveiro-portatil'],
     artigos: ARTIGOS,
-    preco: 2190,
-    dataStatus: 'draft',
+    dataStatus: 'verified',
     ordem: 1,
   },
 
@@ -101,7 +96,7 @@ export const chuveiros: Produto[] = [
     descricao: [
       'O CA é a versão automática do chuveiro de emergência isolado. Em vez da alça, o comando é uma plataforma no piso: a água é liberada assim que a pessoa se posiciona sob o crivo. Não há etapa de busca, não há alavanca a localizar — o próprio ato de chegar ao equipamento já o aciona.',
       'Essa diferença importa mais do que parece. Em um acidente químico, a vítima chega ao chuveiro em pânico, muitas vezes com a visão parcialmente comprometida pelo respingo ou pelo reflexo de fechar os olhos. Qualquer comando que exija localização precisa consome segundos que atuam diretamente sobre a gravidade da lesão.',
-      'A construção acompanha o CM: coluna em aço galvanizado com pintura epóxi verde ou em aço inox, crivo em aço inox, alimentação em 3/4" ou 1" e placa de sinalização. A plataforma é dimensionada para disparar com o peso normal de uma pessoa e para não gerar acionamento acidental por tráfego lateral.',
+      'A construção acompanha o CM: coluna em aço galvanizado com pintura verde ou em aço inox, crivo em aço inox, alimentação em 3/4" ou 1" e placa de sinalização. A plataforma é dimensionada para disparar com o peso normal de uma pessoa e para não gerar acionamento acidental por tráfego lateral.',
       'É a especificação indicada em áreas de risco químico elevado e em pontos onde o equipamento fica distante da supervisão direta — combinado com sensor de fluxo e sinaleira, permite que o acionamento seja percebido remotamente.',
     ],
     bullets: [
@@ -113,16 +108,11 @@ export const chuveiros: Produto[] = [
       'Acionamento através de plataforma',
     ],
     especificacoes: [
-      { label: 'Material da estrutura', valor: 'Aço galvanizado ou aço inox', provisorio: false },
-      { label: 'Bitola de alimentação', valor: '3/4" ou 1"', provisorio: false },
-      { label: 'Crivo', valor: 'Aço inox', provisorio: false },
-      { label: 'Acabamento', valor: 'Pintura verde', provisorio: false },
-      { label: 'Acionamento', valor: 'Automático, por plataforma', provisorio: false },
-      { label: 'Vazão', valor: '76 L/min', provisorio: true },
-      { label: 'Pressão de trabalho', valor: '2,1 a 4,0 bar', provisorio: true },
-      { label: 'Altura do crivo', valor: '2.100 mm', provisorio: true },
-      { label: 'Dimensões da plataforma', valor: '600 × 600 mm', provisorio: true },
-      { label: 'Peso aproximado', valor: '24 kg', provisorio: true },
+      { label: 'Material da estrutura', valor: 'Aço galvanizado ou aço inox' },
+      { label: 'Bitola de alimentação', valor: '3/4" ou 1"' },
+      { label: 'Crivo', valor: 'Aço inox' },
+      { label: 'Acabamento', valor: 'Pintura verde' },
+      { label: 'Acionamento', valor: 'Automático, por plataforma' },
     ],
     aplicacoes: aplicacoesIndustriais,
     conformidade: conformidadeAcionamento,
@@ -146,8 +136,7 @@ export const chuveiros: Produto[] = [
     ],
     relacionados: ['cm-acionamento-manual', 'cla-acionamento-automatico', 'clesp-plataforma-unica'],
     artigos: ARTIGOS,
-    preco: 2890,
-    dataStatus: 'draft',
+    dataStatus: 'verified',
     ordem: 2,
   },
 ]

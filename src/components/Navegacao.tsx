@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { BotaoWhatsApp, LinkRastreado } from './BotaoWhatsApp'
 import { IconeTelefone } from './Icones'
 
@@ -29,6 +29,8 @@ type Props = {
 
 export function Navegacao({ institucionais, categorias, finais, telefone }: Props) {
   const [aberto, setAberto] = useState(false)
+  const [produtos, setProdutos] = useState(false)
+  const caixaProdutos = useRef<HTMLDivElement>(null)
   const caminho = usePathname()
 
   const fechar = () => setAberto(false)
@@ -42,30 +44,121 @@ export function Navegacao({ institucionais, categorias, finais, telefone }: Prop
     }
   }, [aberto])
 
+  // Fecha o submenu de produtos ao clicar fora ou apertar Esc.
+  useEffect(() => {
+    if (!produtos) return
+    const aoClicarFora = (e: MouseEvent) => {
+      if (!caixaProdutos.current?.contains(e.target as Node)) setProdutos(false)
+    }
+    const aoTeclar = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') setProdutos(false)
+    }
+    document.addEventListener('mousedown', aoClicarFora)
+    document.addEventListener('keydown', aoTeclar)
+    return () => {
+      document.removeEventListener('mousedown', aoClicarFora)
+      document.removeEventListener('keydown', aoTeclar)
+    }
+  }, [produtos])
+
   const ativo = (href: string) => caminho === href || caminho.startsWith(href)
-  const todos = [...institucionais, ...categorias, ...finais]
+  const algumaCategoriaAtiva = categorias.some((l) => ativo(l.href))
+
+  const classeItem = (ehAtivo: boolean) =>
+    `whitespace-nowrap rounded-md px-2.5 py-2 text-sm font-medium transition-colors xl:px-3 ${
+      ehAtivo ? 'bg-marca-50 text-marca-800' : 'text-tinta-700 hover:bg-marca-50 hover:text-marca-800'
+    }`
 
   return (
     <>
-      <nav aria-label="Principal" className="hidden items-center gap-1 lg:flex">
-        {todos.map((l) => (
+      {/*
+        As seis categorias viviam soltas na barra: nove itens no total, sem folga
+        para centralizar. Agora elas ficam sob "Produtos" e o menu tem quatro.
+      */}
+      <nav aria-label="Principal" className="hidden flex-1 items-center justify-center gap-1 lg:flex">
+        {institucionais.map((l) => (
           <Link
             key={l.href}
             href={l.href}
             aria-current={ativo(l.href) ? 'page' : undefined}
-            className={`rounded-md px-2.5 py-2 text-sm font-medium transition-colors xl:px-3 ${
-              ativo(l.href)
-                ? 'bg-marca-50 text-marca-800'
-                : 'text-tinta-700 hover:bg-marca-50 hover:text-marca-800'
-            }`}
+            className={classeItem(ativo(l.href))}
+          >
+            {l.label}
+          </Link>
+        ))}
+
+        <div
+          ref={caixaProdutos}
+          className="relative"
+          onMouseEnter={() => setProdutos(true)}
+          onMouseLeave={() => setProdutos(false)}
+        >
+          <button
+            type="button"
+            onClick={() => setProdutos((v) => !v)}
+            aria-expanded={produtos}
+            aria-haspopup="true"
+            className={`inline-flex items-center gap-1 ${classeItem(algumaCategoriaAtiva)}`}
+          >
+            Produtos
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              aria-hidden="true"
+              className={`h-4 w-4 transition-transform ${produtos ? 'rotate-180' : ''}`}
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" d="m6 9 6 6 6-6" />
+            </svg>
+          </button>
+
+          {/*
+            O respiro entre botão e painel é padding do invólucro, não margem do
+            painel: com margem, o mouse cruzaria uma faixa "fora" e o menu piscaria.
+          */}
+          {produtos && (
+            <div className="absolute left-1/2 top-full z-50 w-64 -translate-x-1/2 pt-2">
+              <div className="flex flex-col gap-0.5 rounded-lg border border-marca-100 bg-white p-1.5 shadow-lg">
+                {categorias.map((l) => (
+                  <Link
+                    key={l.href}
+                    href={l.href}
+                    onClick={() => setProdutos(false)}
+                    aria-current={ativo(l.href) ? 'page' : undefined}
+                    /* A categoria atual fica um tom acima do hover, senão os dois estados se confundem. */
+                    className={`block rounded-md px-3 py-2 text-sm font-medium transition-colors ${
+                      ativo(l.href)
+                        ? 'bg-marca-100 text-marca-900'
+                        : 'text-tinta-700 hover:bg-marca-50 hover:text-marca-800'
+                    }`}
+                  >
+                    {l.label}
+                  </Link>
+                ))}
+              </div>
+            </div>
+          )}
+        </div>
+
+        {finais.map((l) => (
+          <Link
+            key={l.href}
+            href={l.href}
+            aria-current={ativo(l.href) ? 'page' : undefined}
+            className={classeItem(ativo(l.href))}
           >
             {l.label}
           </Link>
         ))}
       </nav>
 
-      <div className="flex items-center gap-2">
-        <BotaoWhatsApp variante="compacto" className="hidden sm:inline-flex">
+      <div className="flex flex-1 items-center justify-end gap-2">
+        {/*
+          Abaixo de 440px o botão dividia a barra com o logotipo e o hambúrguer e
+          os três se espremiam. Some nessa faixa — o CTA continua no menu mobile.
+        */}
+        <BotaoWhatsApp variante="compacto" display="hidden min-[440px]:inline-flex">
           Orçamento
         </BotaoWhatsApp>
 

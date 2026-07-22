@@ -36,11 +36,13 @@ export function Footer() {
           <p className="mt-4 text-sm leading-relaxed text-marca-200">
             {empresa.descricaoCurta}
           </p>
-          <ul className="mt-4 space-y-1 text-sm text-marca-300">
-            {empresa.certificacoes.map((c) => (
-              <li key={c}>{c}</li>
-            ))}
-          </ul>
+          {empresa.certificacoes.length > 0 && (
+            <ul className="mt-4 space-y-1 text-sm text-marca-300">
+              {empresa.certificacoes.map((c) => (
+                <li key={c}>{c}</li>
+              ))}
+            </ul>
+          )}
           <div className="mt-5 flex gap-3">
             <a
               href={empresa.redes.instagram}

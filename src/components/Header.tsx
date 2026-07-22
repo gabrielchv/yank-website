@@ -33,7 +33,7 @@ export function Header() {
       {/* Faixa de contato — some no mobile para não roubar altura do topo */}
       <div className="hidden bg-marca-700 text-white md:block">
         <div className="conteudo flex h-9 items-center justify-between text-sm">
-          <p>Fabricante de chuveiros e lava-olhos de emergência há {empresa.fundacaoTexto}</p>
+          <p>Fabricante de chuveiros e lava-olhos de emergência {empresa.fundacaoTexto}</p>
           <LinkRastreado
             href={linkTelefone}
             evento="phone_click"
@@ -46,14 +46,20 @@ export function Header() {
       </div>
 
       <div className="conteudo relative flex h-16 items-center justify-between gap-4 lg:h-20">
-        <Link href="/" className="shrink-0" aria-label={`${empresa.nome} — página inicial`}>
+        {/* Logo e bloco de ações têm flex-1 igual ao do menu: assim o menu fica no centro real da barra. */}
+        {/*
+          A marca tem tamanho fixo em qualquer viewport. Antes ia de h-9 para h-11
+          no lg e o logotipo "pulava" de tamanho ao cruzar o breakpoint; `max-w-none`
+          impede que o flex do cabeçalho o esprema quando o menu fica apertado.
+        */}
+        <Link href="/" className="flex flex-1 shrink-0" aria-label={`${empresa.nome} — página inicial`}>
           <Image
             src={logo.src}
             width={logo.width}
             height={logo.height}
             alt={`${empresa.nome} — fabricante de chuveiros e lava-olhos de emergência`}
             priority
-            className="h-9 w-auto lg:h-11"
+            className="h-10 w-auto max-w-none"
           />
         </Link>
 

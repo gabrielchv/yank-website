@@ -12,10 +12,7 @@ export function AvisoRascunho({ produto }: { produto: Produto }) {
   if (produto.dataStatus !== 'draft') return null
 
   const pendentes = produto.especificacoes.filter((e) => e.provisorio).length
-  const partes = [
-    pendentes > 0 ? `${pendentes} especificaç${pendentes === 1 ? 'ão' : 'ões'}` : null,
-    produto.preco !== undefined ? 'preço' : null,
-  ].filter(Boolean)
+  const partes = pendentes > 0 ? [`${pendentes} especificaç${pendentes === 1 ? 'ão' : 'ões'}`] : []
 
   return (
     <div

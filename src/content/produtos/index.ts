@@ -94,19 +94,4 @@ export function especificacoesVisiveis(p: Produto) {
   return p.especificacoes
 }
 
-/**
- * O preço, ao contrário, nunca entra no JSON-LD enquanto for provisório —
- * preço falso em schema Product gera ação manual do Google, e o risco não
- * compensa nem em preview.
- */
-export function precoVisivel(p: Produto): number | undefined {
-  return p.dataStatus === 'verified' ? p.preco : undefined
-}
-
-/** Preço para exibição na tela, incluindo o provisório em dev/preview. */
-export function precoParaExibicao(p: Produto): { valor: number; provisorio: boolean } | undefined {
-  if (p.preco === undefined) return undefined
-  return { valor: p.preco, provisorio: p.dataStatus !== 'verified' }
-}
-
 export const produtosEmRascunho = produtos.filter((p) => p.dataStatus === 'draft')

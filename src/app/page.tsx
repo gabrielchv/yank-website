@@ -22,7 +22,7 @@ import { construirMetadata } from '@/lib/seo'
 export const metadata: Metadata = construirMetadata({
   title: 'Chuveiro e Lava Olhos de Emergência | Fabricante — Yank EPC',
   description:
-    'Fabricante de chuveiros e lava-olhos de emergência há mais de 30 anos. Equipamentos em aço inox conforme a ABNT NBR 16291. Solicite seu orçamento.',
+    'Fabricante de chuveiros e lava-olhos de emergência desde 1995. Equipamentos em aço inox conforme a ABNT NBR 16291. Solicite seu orçamento.',
   caminho: '/',
 })
 
@@ -30,8 +30,8 @@ const hero = imageManifest.hero
 
 const diferenciais = [
   { titulo: 'Fabricante, não revenda', texto: 'Produção própria em Itatiba/SP' },
-  { titulo: '+30 anos de mercado', texto: 'Antiga Yank Metalúrgica Ltda' },
-  { titulo: 'Certificação SGS', texto: 'Sistema de qualidade ISO 9001' },
+  { titulo: 'Fabricando desde 1995', texto: 'Antiga Yank Metalúrgica Ltda' },
+  { titulo: 'Equipamento montado', texto: 'Sai de fábrica pronto para instalar' },
   { titulo: 'Conforme NBR 16291', texto: 'E referência ANSI/ISEA Z358.1' },
 ]
 
@@ -56,7 +56,7 @@ export default function Home() {
         <div className="conteudo relative py-16 sm:py-20 lg:py-28">
           <div className="max-w-3xl">
             <p className="inline-flex items-center rounded-full bg-marca-800/80 px-3 py-1 text-sm font-medium text-marca-100 ring-1 ring-inset ring-marca-700">
-              Fabricante há mais de 30 anos · Itatiba/SP
+              Fabricante desde 1995 · Itatiba/SP
             </p>
             <h1 className="mt-5 text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl">
               Chuveiro e Lava-Olhos de Emergência
@@ -164,7 +164,7 @@ export default function Home() {
         <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
           <div>
             <h2 className="text-3xl font-bold tracking-tight text-tinta-900 sm:text-4xl">
-              Compromisso com a segurança há mais de 30 anos
+              Compromisso com a segurança desde 1995
             </h2>
             <div className="prosa mt-5">
               <p>
@@ -179,8 +179,8 @@ export default function Home() {
                 construiu a peça — não de quem apenas a revende.
               </p>
               <p>
-                Nosso sistema de qualidade é certificado pela SGS e alinhado à ISO 9001, e os
-                equipamentos seguem a ABNT NBR 16291:2014, com referência à ANSI/ISEA Z358.1.
+                Os equipamentos são fabricados conforme a ABNT NBR 16291:2014 — a norma brasileira
+                de chuveiros e lava-olhos de emergência — com referência à ANSI/ISEA Z358.1.
               </p>
             </div>
             <div className="mt-7 flex flex-col gap-3 sm:flex-row">

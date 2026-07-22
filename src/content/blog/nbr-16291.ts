@@ -5,7 +5,7 @@ export const nbr16291: Artigo = {
   titulo: 'NBR 16291: o que a norma exige de chuveiros e lava-olhos de emergência',
   titleSeo: 'NBR 16291: o que a Norma Exige na Prática | Yank EPC',
   metaDescription:
-    'O que a ABNT NBR 16291:2014 exige de chuveiros e lava-olhos de emergência: distância, acionamento, vazão, sinalização e rotina de teste. Guia do fabricante.',
+    'O que a ABNT NBR 16291:2014 exige de chuveiros e lava-olhos: vazão de 75 L/min, alturas, acionamento em 1 segundo, os 10 segundos de distância e o teste semanal.',
   resumo:
     'A norma que rege chuveiros e lava-olhos de emergência no Brasil é curta, mas cada exigência dela nasceu de um acidente. Este guia traduz o que ela pede em decisões concretas de projeto, instalação e manutenção.',
   publicadoEm: '2026-07-21',
@@ -14,18 +14,23 @@ export const nbr16291: Artigo = {
     {
       tipo: 'p',
       texto:
-        'A ABNT NBR 16291:2014 é a norma brasileira que define requisitos de construção, desempenho, instalação e manutenção de chuveiros e lava-olhos de emergência. Ela é frequentemente citada em especificação de compra e em auditoria, mas raramente lida — e o resultado é um padrão comum na indústria: equipamento correto, instalado de forma que não cumpre a norma.',
+        'A ABNT NBR 16291:2014 — "Chuveiros e lava-olhos de emergência: requisitos gerais" — é a norma brasileira que define construção, desempenho, instalação e manutenção desses equipamentos. Ela é frequentemente citada em especificação de compra e em auditoria, mas raramente lida — e o resultado é um padrão comum na indústria: equipamento correto, instalado de forma que não cumpre a norma.',
     },
     {
       tipo: 'p',
       texto:
-        'Vale começar por um esclarecimento, porque é a dúvida que mais aparece: a NBR 16291 não é, por si só, o que torna o equipamento obrigatório. A obrigação nasce das Normas Regulamentadoras do Ministério do Trabalho — a NR-9 e a NR-15 tratam da exposição a agentes químicos, e a NR-26 da sinalização de segurança. A NBR 16291 é a referência técnica que diz *como* o equipamento deve ser para atender a essa obrigação.',
+        'Vale começar por um esclarecimento, porque é a dúvida que mais aparece: a NBR 16291 não é, por si só, o que torna o equipamento obrigatório. Ela é a referência técnica que diz *como* o equipamento deve ser. A exigência de instalar vem das Normas Regulamentadoras: a NR-32 é explícita, e determina no item 32.3.7.1.3 que o local disponha de "chuveiro e lava-olhos, os quais deverão ser acionados e higienizados semanalmente". Fora do escopo da NR-32, o equipamento entra como medida de controle do risco químico identificado no PGR (NR-01) e no PCMSO (NR-07), e sua sinalização é regida pela NR-26.',
+    },
+    {
+      tipo: 'p',
+      texto:
+        'Outro ponto que economiza discussão em auditoria: a NBR 16291:2014 foi derivada da edição de 2009 da norma americana ANSI/ISEA Z358.1. A ANSI foi revisada em 2014 e reafirmada em 2020, e as duas deixaram de coincidir em alguns pontos. Onde este artigo cita número, ele está identificado como sendo da NBR ou da ANSI — porque especificar contra a norma errada é um erro que só aparece na auditoria.',
     },
     { tipo: 'h2', texto: '1. Distância: os 10 segundos que definem tudo' },
     {
       tipo: 'p',
       texto:
-        'O requisito mais conhecido da norma é também o mais desrespeitado. O equipamento precisa estar a uma distância percorrível em até 10 segundos a partir do ponto de risco — na prática, algo em torno de 20 metros para uma pessoa caminhando em condições normais.',
+        'O requisito mais conhecido da norma é também o mais desrespeitado. O equipamento precisa estar a uma distância percorrível em até 10 segundos a partir do ponto de risco. Repare que o critério é tempo, não metragem: a NBR 16291 não fixa distância em metros. Quem cita "10 metros" está repetindo uma simplificação de internet. A referência métrica existe na ANSI/ISEA Z358.1, que menciona cerca de 55 pés — algo em torno de 17 metros — como equivalência aproximada dos mesmos 10 segundos.',
     },
     {
       tipo: 'p',
@@ -46,7 +51,7 @@ export const nbr16291: Artigo = {
     {
       tipo: 'p',
       texto:
-        'A norma exige que o acionamento seja feito em um único movimento, em menos de um segundo, e sem necessidade de usar as mãos para manter o equipamento aberto. A válvula precisa permanecer aberta até ser fechada deliberadamente.',
+        'A norma exige que o acionamento seja feito em um único movimento, em menos de 1 segundo, e sem necessidade de usar as mãos para manter o equipamento aberto. A válvula precisa permanecer aberta até ser fechada deliberadamente, e a própria válvula de comando do chuveiro deve ficar a menos de 175 cm do piso — alcançável por quem estiver com a visão comprometida.',
     },
     {
       tipo: 'p',
@@ -62,7 +67,31 @@ export const nbr16291: Artigo = {
     {
       tipo: 'p',
       texto:
-        'A norma estabelece parâmetros de vazão mínima, distribuição e altura de jato, com tempo de referência de 15 minutos de irrigação contínua. Três pontos merecem atenção prática na hora de especificar:',
+        'A norma estabelece vazão mínima, geometria do jato e alturas de instalação, todas verificadas a uma pressão de ensaio de 2,1 kgf/cm² (206 kPa, ou 30 psi) e sustentadas por 15 minutos de irrigação contínua:',
+    },
+    {
+      tipo: 'tabela',
+      cabecalho: ['Parâmetro', 'Limite da NBR 16291:2014'],
+      linhas: [
+        ['Vazão do chuveiro', '75 L/min, por no mínimo 15 minutos'],
+        ['Vazão do lava-olhos', '1,5 L/min, por no mínimo 15 minutos'],
+        ['Pressão de ensaio', '2,1 kgf/cm² (206 kPa · 30 psi)'],
+        ['Altura da coluna de lavagem', '210 a 240 cm do piso'],
+        ['Abertura do jato a 150 cm do piso', 'mais de 50 cm de diâmetro'],
+        ['Centro do jato até qualquer obstrução', 'mais de 40 cm'],
+        ['Altura da válvula de comando', 'menos de 175 cm do piso'],
+        ['Bocais do lava-olhos', 'entre 85 e 115 cm do piso'],
+        ['Tempo de acionamento', 'menos de 1 segundo, mantendo-se aberto'],
+      ],
+    },
+    {
+      tipo: 'p',
+      texto:
+        'Duas diferenças em relação à ANSI/ISEA Z358.1-2014 valem ser registradas, porque aparecem em especificação de multinacional: a ANSI pede 75,7 L/min no chuveiro (20 gpm) e admite bocais de lava-olhos entre 83,8 e 134,6 cm — faixa mais larga que a da NBR, herdada da revisão de 2014 que a norma brasileira não acompanhou.',
+    },
+    {
+      tipo: 'p',
+      texto: 'Três pontos merecem atenção prática na hora de especificar:',
     },
     {
       tipo: 'ul',
@@ -81,7 +110,12 @@ export const nbr16291: Artigo = {
     {
       tipo: 'p',
       texto:
-        'A água da lavagem deve estar em temperatura amena. O ponto crítico está nos trechos de tubulação expostos ao sol ou próximos a fontes de calor: a água parada ali pode atingir temperatura capaz de causar queimadura — e é justamente essa água que sai primeiro no acionamento, sobre a pele já lesionada pelo produto químico.',
+        'Aqui as duas normas divergem, e a confusão é frequente. A NBR 16291 trata o assunto no anexo B e pede água em temperatura ambiente, orientando consultar um especialista quando o produto químico tiver reação dependente da temperatura. Já a ANSI/ISEA Z358.1 define "tepid" com faixa fechada: entre 16 °C e 38 °C. Quem especifica contra a ANSI precisa dessa faixa; quem especifica contra a NBR não pode citá-la como exigência brasileira.',
+    },
+    {
+      tipo: 'p',
+      texto:
+        'Na prática, o ponto crítico está nos trechos de tubulação expostos ao sol ou próximos a fontes de calor: a água parada ali pode atingir temperatura capaz de causar queimadura — e é justamente essa água que sai primeiro no acionamento, sobre a pele já lesionada pelo produto químico.',
     },
     {
       tipo: 'p',
@@ -105,7 +139,7 @@ export const nbr16291: Artigo = {
     {
       tipo: 'p',
       texto:
-        'A norma trata de acionamento periódico e inspeção. Na prática consolidada da indústria, isso se traduz em duas rotinas:',
+        'O acionamento semanal não é só recomendação técnica: para os serviços de saúde, a NR-32 o torna obrigação legal, ao exigir que o chuveiro e o lava-olhos "deverão ser acionados e higienizados semanalmente". Procedimentos institucionais que citam a NBR 16291 convergem em deixar a água correr de 1 a 2 minutos. Já a inspeção anual completa é exigência expressa da ANSI/ISEA Z358.1, e prática consolidada no Brasil. As três rotinas usuais:',
     },
     {
       tipo: 'tabela',
@@ -114,7 +148,7 @@ export const nbr16291: Artigo = {
         [
           'Teste de acionamento',
           'Semanal',
-          'Acionar por tempo suficiente para eliminar a água parada da tubulação; conferir vazão, jato, funcionamento da válvula e retorno da alça',
+          'Deixar correr de 1 a 2 minutos para eliminar a água parada da tubulação; conferir vazão, jato, funcionamento da válvula e retorno da alça',
         ],
         [
           'Inspeção completa',
@@ -143,6 +177,8 @@ export const nbr16291: Artigo = {
       tipo: 'ul',
       itens: [
         'Distância percorrível em até 10 segundos, mesmo nível, trajeto livre de degraus e portas',
+        'Vazão de 75 L/min no chuveiro e 1,5 L/min no lava-olhos, a 2,1 kgf/cm², por 15 minutos',
+        'Crivo do chuveiro entre 210 e 240 cm do piso; bocais do lava-olhos entre 85 e 115 cm',
         'Acionamento em um movimento, com válvula que permanece aberta sozinha',
         'Rede dimensionada para a soma de chuveiro e lava-olhos em uso simultâneo, sustentada por 15 minutos',
         'Jato amplo e de baixa energia no chuveiro; jatos suaves e simultâneos no lava-olhos',
@@ -161,17 +197,17 @@ export const nbr16291: Artigo = {
     {
       pergunta: 'Chuveiro de emergência é obrigatório por lei?',
       resposta:
-        'A obrigação vem das Normas Regulamentadoras — NR-9 e NR-15, sobre exposição a agentes químicos, e NR-26, sobre sinalização. A NBR 16291 é a referência técnica que define como o equipamento deve ser para atender a essa obrigação. Na prática, onde há risco de contato com produto químico, o equipamento é exigido.',
+        'A exigência mais explícita está na NR-32, item 32.3.7.1.3, que determina chuveiro e lava-olhos no local, acionados e higienizados semanalmente. Fora desse escopo, o equipamento entra como medida de controle do risco químico levantado no PGR (NR-01), com sinalização regida pela NR-26. A NBR 16291 não cria a obrigação: ela define como o equipamento deve ser para atendê-la.',
     },
     {
       pergunta: 'Qual a distância máxima entre o risco e o chuveiro de emergência?',
       resposta:
-        'A referência é o tempo, não a metragem: até 10 segundos de caminhada, o que costuma equivaler a cerca de 20 metros. O trajeto precisa ser no mesmo nível, sem degraus, sem portas travadas e sem obstruções.',
+        'A referência é o tempo, não a metragem: até 10 segundos de caminhada. A NBR 16291 não fixa distância em metros — a equivalência aproximada de 17 metros vem da ANSI/ISEA Z358.1. O trajeto precisa ser no mesmo nível, sem degraus, sem portas travadas e sem obstruções.',
     },
     {
       pergunta: 'Com que frequência testar o chuveiro de emergência?',
       resposta:
-        'Acionamento semanal, por tempo suficiente para eliminar a água parada da tubulação e confirmar vazão e funcionamento, mais uma inspeção completa anual. Os testes precisam ser registrados — em auditoria, o registro é a evidência.',
+        'Acionamento semanal, deixando correr de 1 a 2 minutos para eliminar a água parada e confirmar vazão e funcionamento, mais uma inspeção completa anual. Em serviços de saúde o acionamento semanal é obrigação da NR-32; a inspeção anual é exigência expressa da ANSI/ISEA Z358.1. Os testes precisam ser registrados — em auditoria, o registro é a evidência.',
     },
     {
       pergunta: 'A norma exige acionamento automático?',

@@ -272,7 +272,7 @@ export const chuveirosELavaOlhos: Produto[] = [
     resumo:
       'Conjugado com cortina de proteção envolvendo a área do banho, para contenção de respingo e privacidade durante a remoção de roupa contaminada.',
     descricao: [
-      'A norma exige que a roupa contaminada seja removida durante o banho de emergência — sem isso, o produto químico retido no tecido continua em contato com a pele e a lavagem não resolve. Na prática, porém, essa etapa é a que mais encontra resistência: em área de circulação, com colegas por perto, a pessoa hesita em se despir, e a hesitação custa exatamente os segundos que importam.',
+      'O procedimento de emergência prevê a remoção da roupa contaminada durante o banho — sem isso, o produto químico retido no tecido continua em contato com a pele e a lavagem não resolve. É justamente para isso que a norma pede válvula que permaneça aberta sem ser segurada: as mãos precisam ficar livres. Na prática, porém, essa etapa é a que mais encontra resistência: em área de circulação, com colegas por perto, a pessoa hesita em se despir, e a hesitação custa exatamente os segundos que importam.',
       'O CLM-E CT resolve isso com uma cortina de proteção que envolve a área do banho. Ela cria o mínimo de privacidade necessário para que a vítima remova a roupa sem hesitar, e ao mesmo tempo contém o respingo da água contaminada, limitando a área afetada e facilitando a limpeza posterior — relevante quando o efluente do banho precisa de destinação controlada.',
       'A estrutura pode ser fornecida em aço galvanizado com pintura verde ou em aço inox, conforme a agressividade do ambiente, com alimentação em 3/4" ou 1". Crivos e bacia são em aço inox e o acionamento é manual, em um único movimento.',
       'É a especificação indicada em áreas de circulação, corredores entre setores, plantas com equipe mista e operações em que o efluente do banho precisa ser contido. Em sala fechada ou área restrita, o ganho da cortina é menor e o CLM-E AI costuma bastar.',
@@ -307,7 +307,7 @@ export const chuveirosELavaOlhos: Produto[] = [
       {
         pergunta: 'Para que serve a cortina de proteção?',
         resposta:
-          'Para duas coisas. Primeiro, dar privacidade: a norma exige remover a roupa contaminada durante o banho, e em área de circulação a pessoa hesita em fazê-lo — a cortina elimina essa hesitação. Segundo, conter o respingo da água contaminada, limitando a área afetada e facilitando a limpeza e a destinação do efluente.',
+          'Para duas coisas. Primeiro, dar privacidade: o procedimento de emergência prevê remover a roupa contaminada durante o banho, e em área de circulação a pessoa hesita em fazê-lo — a cortina elimina essa hesitação. Segundo, conter o respingo da água contaminada, limitando a área afetada e facilitando a limpeza e a destinação do efluente.',
       },
       faqInstalacao,
       faqMaterial,

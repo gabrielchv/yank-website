@@ -57,7 +57,7 @@ export const aplicacoesCampo = [
 
 export const conformidadeBase = [
   'Fabricado conforme os requisitos da ABNT NBR 16291:2014 — Chuveiros e lava-olhos de emergência: requisitos gerais',
-  'Referência à ANSI/ISEA Z358.1-2014 (R2020), norma que deu origem à NBR 16291',
+  'Referência à ANSI/ISEA Z358.1-2014 (R2020); a NBR 16291 foi baseada na edição 2009 dessa norma',
   'Fabricação própria, com controle de qualidade em todas as etapas de produção',
   'Sinalização em verde conforme a NR-26 e a ABNT NBR 7195, que atribui à cor o significado de segurança',
 ]

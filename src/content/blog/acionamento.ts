@@ -14,7 +14,7 @@ export const acionamento: Artigo = {
     {
       tipo: 'p',
       texto:
-        'A ABNT NBR 16291 exige que o acionamento seja feito em um único movimento, em menos de um segundo, e que a válvula permaneça aberta sem precisar ser segurada. Tanto o acionamento manual quanto o automático atendem a esse requisito — então a escolha entre eles não é de conformidade, é de projeto.',
+        'A ABNT NBR 16291 exige que o acionamento seja feito em um único movimento, em 1 segundo ou menos, e que a válvula permaneça aberta sem precisar ser segurada. Tanto o acionamento manual quanto o automático atendem a esse requisito — então a escolha entre eles não é de conformidade, é de projeto.',
     },
     {
       tipo: 'p',
@@ -71,7 +71,7 @@ export const acionamento: Artigo = {
     {
       tipo: 'p',
       texto:
-        'No banho de corpo inteiro, o raciocínio é equivalente: a norma exige remover a roupa contaminada durante a lavagem, porque o produto retido no tecido continua agindo sobre a pele. Isso também exige as duas mãos.',
+        'No banho de corpo inteiro, o raciocínio é equivalente: o procedimento de emergência prevê remover a roupa contaminada durante a lavagem, porque o produto retido no tecido continua agindo sobre a pele. Isso também exige as duas mãos.',
     },
     {
       tipo: 'p',
@@ -115,7 +115,7 @@ export const acionamento: Artigo = {
     {
       pergunta: 'A norma exige acionamento automático?',
       resposta:
-        'Não. A NBR 16291 exige acionamento em um único movimento, em menos de um segundo, com válvula que permaneça aberta sem ser segurada. O acionamento manual por alça ou pedal atende a isso. O automático é uma decisão de projeto, recomendada em áreas de risco elevado.',
+        'Não. A NBR 16291 exige acionamento em um único movimento, em 1 segundo ou menos, com válvula que permaneça aberta sem ser segurada. O acionamento manual por alça ou pedal atende a isso. O automático é uma decisão de projeto, recomendada em áreas de risco elevado.',
     },
     {
       pergunta: 'O acionamento automático pode disparar por acidente?',

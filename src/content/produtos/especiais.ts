@@ -53,7 +53,14 @@ export const especiais: Produto[] = [
         pelo Internet Archive em 2016) publica, para este mesmo modelo, valores
         que batem com a bitola de 1.1/4" declarada no catálogo atual:
 
-          Vazão                20 GPM chuveiro (75,7 L/min) · 3 GPM lava-olhos (11,4 L/min)
+          Vazão                20 GPM chuveiro (75,7 L/min) · 3 GPM na bacia (11,4 L/min)
+
+        ⚠️ Atenção ao rótulo da vazão da bacia: a folha antiga escreve "3 GPM
+        Lava-Olhos", mas 3 GPM é o mínimo que a ANSI/ISEA Z358.1 fixa para
+        lava-olhos E ROSTO (seção 6). Para lava-olhos simples (seção 5) o
+        mínimo é 0,4 GPM (1,5 L/min), e a NBR 16291 pede 1,5 L/min. Se estes
+        valores forem publicados, confirme com a fábrica se a bacia do JKW-151
+        é de lava-olhos ou de lava-olhos e rosto, e rotule na classe correta.
           Crivos               aço inox 304, Ø 300 mm
           Pedestal             300 mm
           Entrada e saída      Ø 1.1/4" BSP / NPT

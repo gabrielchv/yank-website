@@ -19,7 +19,7 @@ export const nbr16291: Artigo = {
     {
       tipo: 'p',
       texto:
-        'Vale começar por um esclarecimento, porque é a dúvida que mais aparece: a NBR 16291 não é, por si só, o que torna o equipamento obrigatório. Ela é a referência técnica que diz *como* o equipamento deve ser. A exigência de instalar vem das Normas Regulamentadoras: a NR-32 é explícita, e determina no item 32.3.7.1.3 que o local disponha de "chuveiro e lava-olhos, os quais deverão ser acionados e higienizados semanalmente". Fora do escopo da NR-32, o equipamento entra como medida de controle do risco químico identificado no PGR (NR-01) e no PCMSO (NR-07), e sua sinalização é regida pela NR-26.',
+        'Vale começar por um esclarecimento, porque é a dúvida que mais aparece: a NBR 16291 não é, por si só, o que torna o equipamento obrigatório. Ela é a referência técnica que diz *como* o equipamento deve ser. A exigência de instalar vem das Normas Regulamentadoras, e três delas são explícitas. A NR-32, nos serviços de saúde, determina no item 32.3.7.1.3 que o local destinado à manipulação ou ao fracionamento de produtos químicos disponha de "chuveiro e lava-olhos, os quais deverão ser acionados e higienizados semanalmente" — e, no item 32.3.9.4.2, exige chuveiro de emergência e lava-olhos também no vestiário da área de quimioterápicos antineoplásicos. A NR-34, na construção e reparação naval, manda manter "lava-olhos de emergência próximo ao local da pintura" e disponibilizar chuveiros nos pontos definidos pela APR (item 34.9.17). A NR-36, no abate e processamento de carnes, inclui a "instalação de chuveiros de segurança e lava-olhos" entre as medidas obrigatórias no uso de amônia (item 36.9.3.2). Fora desses escopos, o equipamento entra como medida de controle do risco químico identificado no PGR (NR-01), e sua sinalização é regida pela NR-26.',
     },
     {
       tipo: 'p',
@@ -51,7 +51,7 @@ export const nbr16291: Artigo = {
     {
       tipo: 'p',
       texto:
-        'A norma exige que o acionamento seja feito em um único movimento, em menos de 1 segundo, e sem necessidade de usar as mãos para manter o equipamento aberto. A válvula precisa permanecer aberta até ser fechada deliberadamente, e a própria válvula de comando do chuveiro deve ficar a menos de 175 cm do piso — alcançável por quem estiver com a visão comprometida.',
+        'A norma exige que o acionamento seja feito em um único movimento, em 1 segundo ou menos, e sem necessidade de usar as mãos para manter o equipamento aberto. A válvula precisa permanecer aberta até ser fechada deliberadamente, e a própria válvula de comando do chuveiro deve ficar a no máximo 175 cm do piso — alcançável por quem estiver com a visão comprometida.',
     },
     {
       tipo: 'p',
@@ -77,11 +77,12 @@ export const nbr16291: Artigo = {
         ['Vazão do lava-olhos', '1,5 L/min, por no mínimo 15 minutos'],
         ['Pressão de ensaio', '2,1 kgf/cm² (206 kPa · 30 psi)'],
         ['Altura da coluna de lavagem', '210 a 240 cm do piso'],
-        ['Abertura do jato a 150 cm do piso', 'mais de 50 cm de diâmetro'],
-        ['Centro do jato até qualquer obstrução', 'mais de 40 cm'],
-        ['Altura da válvula de comando', 'menos de 175 cm do piso'],
+        ['Abertura do jato a 150 cm do piso', 'no mínimo 50 cm de diâmetro'],
+        ['Centro do jato até qualquer obstrução', 'no mínimo 40 cm'],
+        ['Altura da válvula de comando', 'no máximo 175 cm do piso'],
         ['Bocais do lava-olhos', 'entre 85 e 115 cm do piso'],
-        ['Tempo de acionamento', 'menos de 1 segundo, mantendo-se aberto'],
+        ['Bocais até a parede ou obstrução mais próxima', 'no mínimo 15 cm'],
+        ['Tempo de acionamento', '1 segundo ou menos, mantendo-se aberto'],
       ],
     },
     {
@@ -178,7 +179,7 @@ export const nbr16291: Artigo = {
       itens: [
         'Distância percorrível em até 10 segundos, mesmo nível, trajeto livre de degraus e portas',
         'Vazão de 75 L/min no chuveiro e 1,5 L/min no lava-olhos, a 2,1 kgf/cm², por 15 minutos',
-        'Crivo do chuveiro entre 210 e 240 cm do piso; bocais do lava-olhos entre 85 e 115 cm',
+        'Crivo do chuveiro entre 210 e 240 cm do piso; bocais do lava-olhos entre 85 e 115 cm, e a no mínimo 15 cm da parede',
         'Acionamento em um movimento, com válvula que permanece aberta sozinha',
         'Rede dimensionada para a soma de chuveiro e lava-olhos em uso simultâneo, sustentada por 15 minutos',
         'Jato amplo e de baixa energia no chuveiro; jatos suaves e simultâneos no lava-olhos',
@@ -197,7 +198,7 @@ export const nbr16291: Artigo = {
     {
       pergunta: 'Chuveiro de emergência é obrigatório por lei?',
       resposta:
-        'A exigência mais explícita está na NR-32, item 32.3.7.1.3, que determina chuveiro e lava-olhos no local, acionados e higienizados semanalmente. Fora desse escopo, o equipamento entra como medida de controle do risco químico levantado no PGR (NR-01), com sinalização regida pela NR-26. A NBR 16291 não cria a obrigação: ela define como o equipamento deve ser para atendê-la.',
+        'Depende do setor. Três Normas Regulamentadoras são explícitas: a NR-32 (serviços de saúde) exige chuveiro e lava-olhos no local de manipulação ou fracionamento de produtos químicos, acionados e higienizados semanalmente (item 32.3.7.1.3), e também no vestiário da área de quimioterápicos (item 32.3.9.4.2); a NR-34 exige lava-olhos junto ao local de pintura na construção e reparação naval (item 34.9.17); e a NR-36 exige chuveiros de segurança e lava-olhos no uso de amônia em abate e processamento de carnes (item 36.9.3.2). Fora desses escopos, o equipamento entra como medida de controle do risco químico levantado no PGR (NR-01), com sinalização regida pela NR-26. A NBR 16291 não cria a obrigação: ela define como o equipamento deve ser para atendê-la.',
     },
     {
       pergunta: 'Qual a distância máxima entre o risco e o chuveiro de emergência?',

@@ -20,7 +20,102 @@ const OUT_PRODUTOS = join(process.cwd(), 'public', 'produtos')
 const OUT_SITE = join(process.cwd(), 'public', 'site')
 
 /** slug de destino -> arquivos em source-files/, da melhor para a pior */
-type Alvo = { nome: string; destino: string; candidatas: string[]; lossless?: boolean }
+type Alvo = {
+  nome: string
+  destino: string
+  candidatas: string[]
+  lossless?: boolean
+  /** arte plana entregue sobre fundo branco chapado: recorta o fundo */
+  recortarFundoBranco?: boolean
+}
+
+/**
+ * Troca o fundo branco de uma arte plana por transparência.
+ *
+ * Um flood fill a partir das bordas resolveria o fundo, mas não alcança o
+ * branco fechado dentro das letras — o vazio do A, do P, do R ficaria branco
+ * sobre qualquer fundo que não fosse branco. Por isso o branco é tratado por
+ * componente conexo: some tudo, menos o que estiver dentro da caixa do ícone,
+ * que é o pictograma e precisa continuar branco sobre o verde.
+ */
+async function recortarFundoBranco(entrada: Buffer): Promise<ReturnType<typeof sharp>> {
+  const { data, info } = await sharp(entrada).ensureAlpha().raw().toBuffer({ resolveWithObject: true })
+  const W = info.width
+  const H = info.height
+  const N = W * H
+
+  const claro = (k: number) => {
+    const i = k * 4
+    const min = Math.min(data[i], data[i + 1], data[i + 2])
+    const max = Math.max(data[i], data[i + 1], data[i + 2])
+    return min > 150 && max - min < 40
+  }
+  const verde = (k: number) => {
+    const i = k * 4
+    return data[i + 1] > data[i] + 20 && data[i + 1] > data[i + 2] + 20
+  }
+
+  type Caixa = { x0: number; y0: number; x1: number; y1: number; area: number }
+
+  /** componentes conexos de 4 vizinhos sobre um predicado */
+  function componentes(pred: (k: number) => boolean) {
+    const rotulo = new Int32Array(N).fill(-1)
+    const caixas: Caixa[] = []
+    for (let s = 0; s < N; s++) {
+      if (rotulo[s] !== -1 || !pred(s)) continue
+      const id = caixas.length
+      const caixa: Caixa = { x0: W, y0: H, x1: -1, y1: -1, area: 0 }
+      const pilha = [s]
+      rotulo[s] = id
+      while (pilha.length) {
+        const k = pilha.pop() as number
+        const x = k % W
+        const y = (k / W) | 0
+        caixa.area++
+        if (x < caixa.x0) caixa.x0 = x
+        if (x > caixa.x1) caixa.x1 = x
+        if (y < caixa.y0) caixa.y0 = y
+        if (y > caixa.y1) caixa.y1 = y
+        const vizinhos = [x > 0 ? k - 1 : -1, x < W - 1 ? k + 1 : -1, y > 0 ? k - W : -1, y < H - 1 ? k + W : -1]
+        for (const v of vizinhos) {
+          if (v >= 0 && rotulo[v] === -1 && pred(v)) {
+            rotulo[v] = id
+            pilha.push(v)
+          }
+        }
+      }
+      caixas.push(caixa)
+    }
+    return { rotulo, caixas }
+  }
+
+  const manchasVerdes = componentes(verde)
+  const icone = manchasVerdes.caixas.reduce<Caixa | null>((a, c) => (!a || c.area > a.area ? c : a), null)
+  if (!icone) throw new Error('nenhum bloco de cor encontrado — a arte mudou?')
+
+  const fundo = componentes(claro)
+  const preservar = fundo.caixas.map(
+    (c) => c.x0 >= icone.x0 && c.x1 <= icone.x1 && c.y0 >= icone.y0 && c.y1 <= icone.y1,
+  )
+
+  // desfaz a composição sobre branco: C = a*F + (1-a)*255
+  for (let k = 0; k < N; k++) {
+    const id = fundo.rotulo[k]
+    if (id === -1 || preservar[id]) continue
+    const i = k * 4
+    const a = 255 - Math.min(data[i], data[i + 1], data[i + 2])
+    if (a === 0) {
+      data[i + 3] = 0
+      continue
+    }
+    for (let c = 0; c < 3; c++) {
+      data[i + c] = Math.max(0, Math.min(255, Math.round((data[i + c] * 255 - 255 * (255 - a)) / a)))
+    }
+    data[i + 3] = a
+  }
+
+  return sharp(data, { raw: { width: W, height: H, channels: 4 } })
+}
 
 const produtos: Alvo[] = [
   // Chuveiros e lava-olhos
@@ -64,7 +159,15 @@ const produtos: Alvo[] = [
 const site: Alvo[] = [
   // Logos são arte vetorizada rasterizada: WebP com perda borra as bordas do
   // texto no tamanho pequeno do cabeçalho, então vão sem perda (custam ~10KB).
-  { nome: 'Logo', destino: 'logo', candidatas: ['logo-yank-2024-a.png', 'logo-yank-top.png'], lossless: true },
+  // O original veio com fundo branco chapado, o que deixava um retângulo branco
+  // em volta da marca em qualquer fundo que não fosse branco.
+  {
+    nome: 'Logo',
+    destino: 'logo',
+    candidatas: ['logo-yank-2024-a.png', 'logo-yank-top.png'],
+    lossless: true,
+    recortarFundoBranco: true,
+  },
   { nome: 'Logo branco', destino: 'logo-branco', candidatas: ['logo-yank-branco.png'], lossless: true },
   { nome: 'Hero', destino: 'hero', candidatas: ['slide-01-generated.png', 'slide-01.webp'] },
   { nome: 'Hero alt', destino: 'hero-2', candidatas: ['slider-2.webp'] },
@@ -107,10 +210,12 @@ async function processar(alvo: Alvo, pastaSaida: string, prefixoPublico: string)
   // Fonte já é WebP no tamanho final: copia os bytes. Reencodar WebP com perda
   // sobre WebP com perda só empilha artefato e ainda engorda o arquivo.
   let saida: Buffer
-  if (melhor.arquivo.endsWith('.webp') && !precisaReduzir) {
+  if (melhor.arquivo.endsWith('.webp') && !precisaReduzir && !alvo.recortarFundoBranco) {
     saida = melhor.buf
   } else {
-    const pipeline = sharp(melhor.buf).rotate()
+    const pipeline = alvo.recortarFundoBranco
+      ? await recortarFundoBranco(melhor.buf)
+      : sharp(melhor.buf).rotate()
     if (precisaReduzir) pipeline.resize({ width: 1600 })
     saida = await (alvo.lossless
       ? pipeline.webp({ lossless: true, effort: 6 })
